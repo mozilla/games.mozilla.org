@@ -160,11 +160,66 @@ big {
   list-style: none;
 }
 
-.group--countdown {
+.group--medium {
+  background: rgba(0,0,0,.5);
+  color: #fff;
+}
+
+.group--light {
   background: #fff;
   color: #333;
 }
 
 .group--light h2 {
   color: rgb(0,0,102);
+}
+
+.partner__item {
+  float: left;
+  height: 80px;
+  width: 150px;
+}
+
+.partner__item + .partner__item {
+  margin-left: 12px;
+}
+
+.partner__item--unity {
+  background: url(../img/logos/partners/unity.png) center no-repeat;
+  background-size: contain;
+}
+
+.partner__item--epic {
+  background: url(../img/logos/partners/epic.png) center no-repeat;
+  background-size: contain;
+}
+
+.partner__item--playcanvas {
+  background: #fff url(../img/logos/partners/playcanvas.png) center no-repeat;
+  background-size: contain;
+  border-right: 7px solid #fff;
+  height: 26px;
+  margin-top: 25px;
+  width: 143px;
+}
+
+.partner__item--king {
+  background: url(../img/logos/partners/king.png) center no-repeat;
+  background-size: contain;
+}
+
+.partner__item--turbulenz {
+  background: url(../img/logos/partners/turbulenz.png) center no-repeat;
+  background-size: contain;
+}
+
+.partner__item--aerys {
+  background: url(../img/logos/partners/aerys.png) center no-repeat;
+  background-size: contain;
+}
+
+.partner__item a {
+  border: 0;
+  display: block;
+  height: 100%;
 }
