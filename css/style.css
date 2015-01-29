@@ -1,0 +1,62 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: linear-gradient(160deg, rgb(0, 1, 74) 0%, rgb(30, 90, 120) 100%);
+}
+
+body {
+  font: 1rem/1.5 'Fira Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.hidden-text {
+  text-indent: -9999px;
+}
+
+.gdc-logo {
+  text-align: center;
+}
+
+.gdc__logo--mozilla,
+.gdc__logo--gdc {
+  margin: 0 auto;
+}
+
+.gdc__logo--mozilla {
+  background: url(../img/logos/mozilla--white.svg) no-repeat;
+  background-size: contain;
+  height: 30px;
+  margin-bottom: 30px;
+  width: 120px;
+}
+
+.gdc__logo--gdc {
+  background: url(../img/logos/gdc15.svg) no-repeat;
+  background-size: contain;
+  height: 105px;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+.gdc__text--gdc {
+  color: #eddfff;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.gdc__text--gdc--location {
+  display: block;
+  font-size: 18px;
+}
+
+.wrap {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 30px;
+}
