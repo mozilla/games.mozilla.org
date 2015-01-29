@@ -67,6 +67,10 @@ body {
   padding: 30px;
 }
 
+.wrap-tiny {
+  padding: 0 30px;
+}
+
 h2 {
   color: #eddfff;
   font-size: 12px;
@@ -109,9 +113,14 @@ address {
   font-size: 16px;
 }
 
-.col-2 {
+.col-medium {
   float: left;
-  width: 50%;
+  width: 40%;
+}
+
+.col-small {
+  float: left;
+  width: 20%;
 }
 
 .event__location {
@@ -145,4 +154,17 @@ big {
 .event__location__address__booth {
   font-size: 22px;
   margin-bottom: 12px;
+}
+
+.social__list {
+  list-style: none;
+}
+
+.group--countdown {
+  background: #fff;
+  color: #333;
+}
+
+.group--light h2 {
+  color: rgb(0,0,102);
 }
