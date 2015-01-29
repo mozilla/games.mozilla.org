@@ -15,6 +15,12 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.c:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
 .hidden-text {
   text-indent: -9999px;
 }
@@ -59,4 +65,84 @@ body {
   margin: 0 auto;
   max-width: 1024px;
   padding: 30px;
+}
+
+h2 {
+  color: #eddfff;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 22px;
+}
+
+.group--about-gdc {
+  background: rgb(68,0,155);
+  color: #fff;
+}
+
+a {
+  border-bottom: 1px solid rgba(0,180,214,.25);
+  color: rgb(0,180,214);
+  text-decoration: none;
+  transition: .1s ease-in;
+}
+
+a:hover {
+  border-bottom-color: #eddfff;
+  color: #eddfff;
+}
+
+address {
+  font-style: normal;
+}
+
+.event__when {
+  color: #fff;
+}
+
+.event__location {
+  color: rgb(0,180,214);
+  font-size: 16px;
+}
+
+.col-2 {
+  float: left;
+  width: 50%;
+}
+
+.event__location {
+}
+
+.event__when {
+
+}
+
+h3 {
+  font-weight: 400;
+}
+
+p + h3 {
+  margin-top: 10px;
+}
+
+dt {
+  float: left;
+  width: 150px;
+}
+
+dd {
+  font-weight: 300;
+}
+
+big {
+  font-size: 22px;
+}
+
+.event__location__address__booth {
+  font-size: 22px;
+  margin-bottom: 12px;
 }
