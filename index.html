@@ -5,7 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mozilla GDC 2015</title>
     <link rel="stylesheet" href="css/style.css" media="all">
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
+    <h1>Mozilla GDC 2015</h1>
+    <section id="event" class="group group--event">
+      <h2>Event</h2>
+      <section id="event-location" class="event__location">
+        <h3>Location</h3>
+        <address>
+          South Hall Booth #2110<br>
+          <a href="http://www.gdconf.com/">Game Developers Conference 2015</a><br>
+          <a href="https://www.google.com/maps?q=Moscone+Center+SF">Moscone Center</a><br>
+          San Francisco, CA
+        </address>
+      </section>
+      <section id="event-when" class="event__when">
+        <h3>When</h3>
+        <p>March 2–6, 2015</p>
+      </section>
+    </section>
+    <section id="about-gdc" class="group group--about-gdc">
+      <h2>About GDC</h2>
+      <p>Connect with Mozilla engineers and other leaders for a three-day exploration of building beautiful and performant games on the Web.</p>
+    </section>
+    <section id="social-media" class="group group--social-media">
+      <h2>Social media</h2>
+      <ul class="social__list">
+        <li class="social__item social__item--twitter"><a href="http://twitter.com/firefox">Twitter</a></li>
+        <li class="social__item social__item--facebook"><a href="http://facebook.com/Firefox">Facebook</a></li>
+      </ul>
+    </section>
+    <section id="countdown" class="group group--countdown">
+      <h2>Countdown</h2>
+      <p>Count the days until GDC 2015.</p>
+    </section>
+    <section id="partners" class="group group--partners">
+      <h2>Partners</h2>
+      <ul class="partner__list">
+        <li class="partner__item partner__item--unity"><a href="http://unity3d.com/">Unity</a></li>
+        <li class="partner__item partner__item--epic"><a href="http://epicgames.com/">Epic</a></li>
+        <li class="partner__item partner__item--playcanvas"><a href="https://playcanvas.com/">PlayCanvas</a></li>
+        <li class="partner__item partner__item--king"><a href="https://king.com/">King</a></li>
+        <li class="partner__item partner__item--turbulenz"><a href="https://ga.me/">Turbulenz</a></li>
+        <li class="partner__item partner__item--aerys"><a href="http://aerys.in/">Aerys</a></li>
+      </ul>
+    </section>
+    <section id="demos" class="group group--demos">
+      <h2>Demos</h2>
+      <ul class="demo__list">
+        <li id="demos-teleporter" class="demo__item">
+          <h3><a href="http://blogs.unity3d.com/2014/05/19/teleporter-demo/">Teleporter</a></h3>
+          <p>A demo showing the next generation of 3D on the web: physical-based shading, fully deferred rendering, and global illumination.</p>
+          <ul>
+            <li>Partner: <a href="http://unity3d.com/">Unity</a></li>
+            <li>Technologies: WebGL2</li>
+          </ul>
+        </li>
+        <li id="demos-chase" class="demo__item">
+          <h3><a href="http://unity3d.com/pages/the-chase">Chase</a></h3>
+          <p>Showcasing the sky's-the-limit potential of the Unity game engine for bringing exceptional visual fidelity and performance to the web on handheld devices.</p>
+          <ul>
+            <li>Partner: <a href="http://unity3d.com/">Unity</a></li>
+            <li>Technologies: WebGL</li>
+          </ul>
+        </li>
+        <li id="demos-epic-unreal-engine-with-webvr" class="demo__item">
+          <h3>Epic Unreal Engine with WebVR</h3>
+          <p>A preview of how the Web is evolving as a powerful platform for virtual reality.</p>
+          <ul>
+            <li>Partner: <a href="http://epicgames.com/">Epic</a></li>
+            <li>Technologies: WebGL2, WebVR</li>
+          </ul>
+        </li>
+        <li id="demos-oculus-rex" class="demo__item">
+          <h3><a href="http://www.oculus-rex.com/">Oculus Rex</a></h3>
+          <p>WebGL and the Oculus Rift work together to provide a fun and thrilling experience.</p>
+          <p>Developed in C++11 with the Minko open-source 3D engine and powered by Mozilla's asm.js and Emscripten technologies, the 3D Web application performance is close to native.</p>
+          <ul>
+            <li>Partner: <a href="http://aerys.in/">Aerys</a></li>
+            <li>Technologies: WebGL, asm.js, emscripten</li>
+          </ul>
+        </li>
+        <li id="demos-tanx" class="demo__item">
+          <h3><a href="http://playcanv.as/b/76cfrj7C">Tanx</a></h3>
+          <p>A completely cross-platform, tank battle MMO game.</p>
+          <ul>
+            <li>Partner: <a href="https://playcanvas.com/">PlayCanvas</a></li>
+            <li>Technologies: WebGL, WebRTC, WebSockets, Gamepad API, Canvas</li>
+          </ul>
+        </li>
+        <li id="demos-the-marvellous-miss-take" class="demo__item">
+          <h3><a href="http://misstakegame.com/">The Marvellous Miss Take</a></h3>
+          <p>In full WebGL glory, the stealth genre gets turned on its head in this heist adventure.</p>
+          <ul>
+            <li>Partner: <a href="https://ga.me/">Turbulenz</a></li>
+            <li>Technologies: WebGL (handwritten), WebSockets, Gamepad API</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section id="announcements" class="group group--announcements">
+      <h2>Announcements</h2>
+      <ul class="announcement__list">
+        <li class="announcement__item"><a href="">Mozilla and Unity Bring Unity 5 Game Engine to WebGL2</a></li>
+        <li class="announcement__item"><a href="">Mozilla and Epic Preview Virtual Reality in Firefox and Unreal Engine 5</a></li>
+        <li class="announcement__item"><a href="">Near-Native Speed on the Web: Introducing Threads and SIMD.js</a></li>
+        <li class="announcement__item"><a href="">asm.js Benchmarks Produce Near-Native Performance in Firefox</a></li>
+        <li class="announcement__item"><a href="">The Rex of the Story: A Case Study of Using Mozilla's Emscripten in Aerys' Oculus Rex</a></li>
+      </ul>
+    </section>
+    <section id="get-involved" class="group group--get-involved">
+      <h2>Get Involved</h2>
+      <ul class="involved__list">
+        <li class="involved__item"><strong>IRC:</strong> <a href="#games">irc://irc.mozilla.org:6697/games</a> on <a href="irc://irc.mozilla.org:6697">irc.mozilla.org</a></li>
+        <li class="involved__item"><strong>Twitter:</strong> <a href="https://twitter.com/hashtag/GDC15%20Mozilla">Stay tuned on Twitter</a></li>
+        <li class="involved__item"><strong>GitHub:</strong> <a href="https://github.com/mozilla/">Mozilla ♥ open source</a></li>
+        <li class="involved__item"><strong>Wiki:</strong> <a href="https://wiki.mozilla.org/Platform/Games">Mozilla's open wiki for the Games Platform</a></li>
+      </ul>
+    </section>
+    <footer id="mozilla" class="group group--footer">
+      <h2>Mozilla</h2>
+      <ul class="footer__list">
+        <li class="footer__item"><a href="https://www.mozilla.org/privacy">Privacy Policy</a></li>
+        <li class="footer__item"><a href="https://www.mozilla.org/about/legal.html">Legal Notices</a></li>
+        <li class="footer__item"><a href="https://www.mozilla.org/legal/fraud-report/index.html">Report Trademark Abuse</a></li>
+      </ul>
+      <ul class="footer__list">
+        <li class="footer__item"><a href="https://www.mozilla.org/about/partnerships/">Partner with us</a></li>
+        <li class="footer__item"><a href="http://twitter.com/firefox">Twitter</a></li>
+        <li class="footer__item"><a href="http://facebook.com/Firefox">Facebook</a></li>
+      </ul>
+    </footer>
   </body>
 </html>
