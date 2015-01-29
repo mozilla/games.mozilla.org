@@ -223,3 +223,67 @@ big {
   display: block;
   height: 100%;
 }
+
+.group--demos {
+  background: rgb(0,112,219);
+}
+
+.demo__list {
+  margin-left: -30px;
+}
+
+.demo__list,
+.demo__list ul {
+  list-style: none;
+}
+
+.demo__list ul {
+  font-size: 12px;
+}
+
+.demo__item {
+  float: left;
+  padding: 30px;
+  width: 50%;
+}
+
+.demo__item a {
+  background: #fff;
+  border: 0;
+  display: block;
+  padding: 15px;
+}
+
+.demo__item a,
+.demo__item a:hover {
+  color: #333;
+}
+
+.demo__item a h3 {
+  border-bottom: 1px solid #ccc;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.demo__item ul {
+  margin-top: 5px;
+}
+
+.demo__item p {
+  color: #555;
+  font-size: 14px;
+}
+
+.demo__item img {
+  display: block;
+  float: left;
+  position: absolute;
+  left: 15px;
+  max-width: 120px;
+}
+
+.demo__item a {
+  padding-left: 150px;
+  position: relative;
+}
