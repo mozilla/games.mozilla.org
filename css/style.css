@@ -34,12 +34,15 @@ body {
   margin: 0 auto;
 }
 
-.gdc__logo--mozilla {
-  background: url(../img/logos/mozilla--white.svg) no-repeat;
+.mozilla-logo {
+  background: url(../img/logos/mozilla.svg) no-repeat;
   background-size: contain;
   height: 30px;
-  margin-bottom: 30px;
   width: 120px;
+}
+
+.gdc__logo--mozilla {
+  margin-bottom: 30px;
 }
 
 .gdc__logo--gdc {
@@ -113,14 +116,21 @@ address {
   font-size: 16px;
 }
 
-.col-medium {
+/* deal with these floats until I turn these into flexboxes */
+.col {
   float: left;
+}
+
+.col--40 {
   width: 40%;
 }
 
-.col-small {
-  float: left;
+.col--20 {
   width: 20%;
+}
+
+.col--33 {
+  width: 33.3333%;
 }
 
 .event__location {
@@ -348,4 +358,14 @@ ul {
 
 .involved__item strong {
   margin-right: 5px;
+}
+
+.footer__logo {
+  border: 0;
+  display: block;
+  width: 100%;
+}
+
+.footer__item + .footer__item {
+  margin-top: 5px;
 }
