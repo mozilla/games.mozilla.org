@@ -83,7 +83,7 @@ p {
   font-size: 22px;
 }
 
-.group--about-gdc {
+.group--purple {
   background: rgb(68,0,155);
   color: #fff;
 }
@@ -156,7 +156,7 @@ big {
   margin-bottom: 12px;
 }
 
-.social__list {
+ul {
   list-style: none;
 }
 
@@ -170,12 +170,13 @@ big {
   color: #333;
 }
 
-.group--light h2 {
-  color: rgb(0,0,102);
+.group--light a:hover {
+  border-bottom-color: #369;
+  color: #369;
 }
 
-.partner__list {
-  list-style: none;
+.group--light h2 {
+  color: rgb(0,0,102);
 }
 
 .partner__item {
@@ -234,11 +235,6 @@ big {
 
 .demo__list {
   margin-left: -30px;
-}
-
-.demo__list,
-.demo__list ul {
-  list-style: none;
 }
 
 .demo__list ul {
@@ -332,4 +328,24 @@ big {
 
 .demo__item--the-marvellous-miss-take a:before {
   background-image: url(../img/demos/miss-take/6.png);
+}
+
+.group--announcements {
+  font-size: 22px;
+}
+
+.announcement__item +.announcement__item {
+  margin-top: 5px;
+}
+
+.involved__heading {
+  margin-bottom: 10px;
+}
+
+.involved__item {
+  margin-top: 5px;
+}
+
+.involved__item strong {
+  margin-right: 5px;
 }
