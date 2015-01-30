@@ -283,11 +283,53 @@ big {
   display: block;
   float: left;
   position: absolute;
-  left: 15px;
-  max-width: 120px;
+  left: 0;
+  height: 100%;
+  top: 0;
+  max-width: 180px;
 }
 
 .demo__item a {
-  padding-left: 150px;
+  padding-left: 200px;
   position: relative;
+}
+
+.demo__item img {
+  display: none;
+}
+
+.demo__item a:before {
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 170px;
+}
+
+.demo__item--teleporter a:before {
+  background-image: url(../img/demos/teleporter/1.jpg);
+}
+
+.demo__item--chase a:before {
+  background-image: url(../img/demos/chase/1.jpg);
+}
+
+.demo__item--epic-unreal-engine-with-webvr a:before {
+  background-image: url(../img/demos/unreal-engine-with-webvr/2.png);
+}
+
+.demo__item--oculus-rex a:before {
+  background-image: url(../img/demos/oculus-rex/1.jpg);
+}
+
+.demo__item--tanx a:before {
+  background-image: url(../img/demos/tanx/1.png);
+}
+
+.demo__item--the-marvellous-miss-take a:before {
+  background-image: url(../img/demos/miss-take/6.png);
 }
