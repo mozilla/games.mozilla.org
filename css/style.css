@@ -25,8 +25,25 @@ body {
   text-indent: -9999px;
 }
 
+.group--header {
+  background: rgb(42,28,28) url(../img/demos/teleporter/1.jpg) -70% 0 no-repeat;
+  background-size: fill;
+}
+
+.group--header:after {
+  background: rgba(0,0,0,.6);
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 298px;
+  width: 100%;
+}
+
 .gdc-logo {
+  position: relative;
   text-align: center;
+  z-index: 1;
 }
 
 .gdc__logo--mozilla,
