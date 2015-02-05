@@ -52,14 +52,14 @@ body {
 }
 
 .mozilla-logo {
-  background: url(http://people.mozilla.org/~smartell/GDC/2015/mozilla.svg) no-repeat;
-  background-size: contain;
+  background: url(../img/mozilla.svg) no-repeat;
+  background-size: auto 30px;
   height: 30px;
-  width: 120px;
+  width: 80px;
 }
 
 .gdc__logo--mozilla {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .gdc__logo--gdc {
