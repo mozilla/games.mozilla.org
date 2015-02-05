@@ -7,7 +7,7 @@
 }
 
 html {
-  background: linear-gradient(160deg, rgb(0, 1, 74) 0%, rgb(30, 90, 120) 100%);
+  background: rgb(0,150,221);
 }
 
 body {
@@ -26,23 +26,23 @@ body {
 }
 
 .group--header {
-  background: rgb(42,28,28) url(../img/demos/teleporter/1.jpg) -70% 0 no-repeat;
-  background-size: fill;
+  background: rgb(0,150,221) url(../img/header.jpg) 80% 0 repeat-x;
+  position: relative;
+  text-align: center;
 }
 
 .group--header:after {
-  background: rgba(0,0,0,.6);
+  background: rgba(0,150,221,.5);
   content: '';
   display: block;
+  height: 100%;
   position: absolute;
   top: 0;
-  height: 298px;
   width: 100%;
 }
 
-.gdc-logo {
+.group--header .wrap {
   position: relative;
-  text-align: center;
   z-index: 1;
 }
 
@@ -52,7 +52,7 @@ body {
 }
 
 .mozilla-logo {
-  background: url(../img/logos/mozilla.svg) no-repeat;
+  background: url(http://people.mozilla.org/~smartell/GDC/2015/mozilla.svg) no-repeat;
   background-size: contain;
   height: 30px;
   width: 120px;
@@ -76,6 +76,11 @@ body {
   font-weight: 300;
 }
 
+.group--about-gdc {
+  margin-top: 30px;
+  text-align: left;
+}
+
 .gdc__text--gdc--location {
   display: block;
   font-size: 18px;
@@ -92,7 +97,7 @@ body {
 }
 
 h2 {
-  color: #eddfff;
+  color: #666;
   font-size: 12px;
   font-weight: 300;
   margin-bottom: 5px;
@@ -101,11 +106,6 @@ h2 {
 
 p {
   font-size: 22px;
-}
-
-.group--purple {
-  background: rgb(68,0,155);
-  color: #fff;
 }
 
 a {
@@ -120,17 +120,28 @@ a:hover {
   color: #eddfff;
 }
 
-address {
-  font-style: normal;
+.group--dark a {
+  border-bottom-color: #f7f0ff;
+  color: #f7f0ff;
 }
 
-.event__when {
+.group--dark a:hover {
+  border-bottom-color: #fff;
   color: #fff;
 }
 
-.event__location {
-  color: rgb(0,180,214);
-  font-size: 16px;
+.group--event a {
+  border-bottom-color: #ffcb00;
+  color: #ffcb00;
+}
+
+.group--light a:hover {
+  border-bottom-color: #369;
+  color: #369;
+}
+
+address {
+  font-style: normal;
 }
 
 /* deal with these floats until I turn these into flexboxes */
@@ -148,13 +159,6 @@ address {
 
 .col--33 {
   width: 33.3333%;
-}
-
-.event__location {
-}
-
-.event__when {
-
 }
 
 h3 {
@@ -187,23 +191,33 @@ ul {
   list-style: none;
 }
 
-.group--medium {
-  background: rgba(0,0,0,.5);
+.group--dark h2 {
+  color: #ccc;
+}
+
+.group--dark {
+  background-color: rgb(0,150,221);
   color: #fff;
 }
 
+.group--event {
+  background-image: url(../img/event.jpg);
+  background-color: rgb(225,39,98);
+  background-repeat: no-repeat;
+}
+
 .group--light {
-  background: #fff;
+  background: #efefef;
   color: #333;
 }
 
-.group--light a:hover {
-  border-bottom-color: #369;
-  color: #369;
+.copy--light,
+.copy--light h2 {
+  color: #fff;
 }
 
-.group--light h2 {
-  color: rgb(0,0,102);
+.copy--light h2 {
+  color: #ccc;
 }
 
 .partner__item {
@@ -257,7 +271,7 @@ ul {
 }
 
 .group--demos {
-  background: rgb(0,112,219);
+  background: #fff;
 }
 
 .demo__list {
@@ -275,7 +289,7 @@ ul {
 }
 
 .demo__item a {
-  background: #fff;
+  background: #efefef;
   border: 0;
   display: block;
   padding: 15px;
