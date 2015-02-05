@@ -121,8 +121,8 @@ a:hover {
 }
 
 .group--dark a {
-  border-bottom-color: #f7f0ff;
-  color: #f7f0ff;
+  border-bottom-color: #def;
+  color: #def;
 }
 
 .group--dark a:hover {
@@ -389,6 +389,10 @@ ul {
 
 .involved__item strong {
   margin-right: 5px;
+}
+
+.group--footer {
+  background: rgba(0,0,0,.5);
 }
 
 .footer__logo {
