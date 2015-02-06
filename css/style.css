@@ -220,53 +220,38 @@ ul {
   color: #ccc;
 }
 
+.partner__list {
+  min-height: 75px;
+}
+
 .partner__item {
-  float: left;
-  height: 80px;
-  width: 150px;
+  min-width: 150px;
 }
 
 .partner__item + .partner__item {
-  margin-left: 12px;
-}
-
-.partner__item--unity {
-  background: url(../img/logos/partners/unity.png) center no-repeat;
-  background-size: contain;
+  margin-left: 10px;
 }
 
 .partner__item--epic {
-  background: url(../img/logos/partners/epic.png) center no-repeat;
-  background-size: contain;
-}
-
-.partner__item--playcanvas {
-  background: #fff url(../img/logos/partners/playcanvas.png) center no-repeat;
-  background-size: contain;
-  height: 25px;
-  margin-top: 25px;
-  width: 143px;
+  min-width: 66px;
 }
 
 .partner__item--king {
-  background: url(../img/logos/partners/king.png) center no-repeat;
-  background-size: contain;
+  min-width: 111px;
 }
 
-.partner__item--turbulenz {
-  background: url(../img/logos/partners/turbulenz.png) center no-repeat;
-  background-size: contain;
-}
-
-.partner__item--aerys {
-  background: url(../img/logos/partners/aerys.png) center no-repeat;
-  background-size: contain;
+.partner__item a,
+.partner__item img {
+  display: block;
 }
 
 .partner__item a {
   border: 0;
-  display: block;
-  height: 100%;
+}
+
+.partner__item img {
+  max-height: 75px;
+  max-width: 150px;
 }
 
 .group--demos {
@@ -402,4 +387,20 @@ ul {
 
 .footer__item + .footer__item {
   margin-top: 5px;
+}
+
+/* use flexbox to stretch a bunch of items in a container, with
+   horizontal space between each item (and each vertical centred). */
+.flex--spread {
+  /* old flexbox */
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -webkit-justify-content: space-between;
+
+  /* new flexbox */
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
