@@ -243,8 +243,7 @@ ul {
 .partner__item--playcanvas {
   background: #fff url(../img/logos/partners/playcanvas.png) center no-repeat;
   background-size: contain;
-  border-right: 7px solid #fff;
-  height: 26px;
+  height: 25px;
   margin-top: 25px;
   width: 143px;
 }
