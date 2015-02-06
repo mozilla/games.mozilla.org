@@ -253,81 +253,13 @@ ul {
   max-width: 150px;
 }
 
-.group--demos {
-  background: #fff;
-}
-
-.demo__list {
-  margin-left: -30px;
-}
-
-.demo__list ul {
-  font-size: 12px;
-}
-
-.demo__item {
-  float: left;
-  padding: 30px;
-  width: 50%;
-}
-
-.demo__item a {
-  background: #efefef;
-  border: 0;
-  display: block;
-  padding: 15px;
-}
-
-.demo__item a,
-.demo__item a:hover {
-  color: #333;
-}
-
-.demo__item a h3 {
-  border-bottom: 1px solid #ccc;
-  color: #333;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.demo__item ul {
-  margin-top: 5px;
-}
-
-.demo__item p {
-  color: #555;
-  font-size: 14px;
-}
-
-.demo__item img {
-  display: block;
-  float: left;
-  position: absolute;
-  left: 0;
-  height: 100%;
-  top: 0;
-  max-width: 180px;
-}
-
-.demo__item a {
-  padding-left: 200px;
-  position: relative;
-}
-
-.demo__item img {
-  display: none;
-}
-
 .demo__item a:before {
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   content: '';
   display: block;
-  height: 100%;
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  width: 170px;
+  min-height: 130px;
+  width: 100%;
 }
 
 .demo__item--teleporter a:before {
@@ -347,11 +279,74 @@ ul {
 }
 
 .demo__item--tanx a:before {
+  background-size: 100% 100%;
   background-image: url(../img/demos/tanx/1.png);
 }
 
 .demo__item--the-marvellous-miss-take a:before {
   background-image: url(../img/demos/miss-take/6.png);
+}
+
+.group--demos {
+  background: #fff;
+}
+
+.demo__item {
+  max-width: 400px;
+}
+
+.demo__item a {
+  border: 0;
+  display: block;
+}
+
+.demo__item a:hover {
+  background: rgba(0,180,214,.25);
+  color: #111;
+}
+
+.demo__item a:hover h3 {
+  border-bottom-color: transparent;
+  color: #369;
+}
+
+.demo__item a:hover p {
+  color: #333;
+}
+
+.demo__item a:hover ul {
+  color: #555;
+}
+
+.demo__item h3 {
+  border-bottom: 1px solid #ccc;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  transition: .1s ease-in border-bottom, .1s ease-in color;
+}
+
+.demo__item p {
+  color: #555;
+  font-size: 14px;
+}
+
+.demo__list ul {
+  color: #888;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.demo__item img {
+  display: none;
+  max-height: 200px;
+  max-width: 100%;
+}
+
+.demo__item__details {
+  padding: 15px;
 }
 
 .group--announcements {
@@ -402,4 +397,45 @@ ul {
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.flex--variable {
+  /* old flexbox */
+  -webkit-flex-wrap: wrap;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+
+  /* new flexbox */
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0 -7.5px;  /* Because we're going to space each 15px apart */
+}
+
+.flex--variable > li {
+  display: flex;
+  flex: 0 1 33.33%;
+  margin-top: 15px;
+  padding: 0 7.5px;
+}
+
+@media (min-width: 400px) {
+  .flex--variable > li {
+    -webkit-flex-basis: 100%;
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  .flex--variable > li {
+    -webkit-flex-basis: 50%;
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 800px) {
+  .flex--variable > li {
+    -webkit-flex-basis: 33.3333%;
+    flex-basis: 33.3333%;
+  }
 }
