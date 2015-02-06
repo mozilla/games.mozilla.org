@@ -71,7 +71,7 @@ body {
 }
 
 .gdc__text--gdc {
-  color: #eddfff;
+  color: #9df;
   font-size: 24px;
   font-weight: 300;
 }
@@ -197,7 +197,6 @@ ul {
 
 .group--dark {
   background-color: rgb(0,150,221);
-  color: #fff;
 }
 
 .group--event {
@@ -207,7 +206,7 @@ ul {
 }
 
 .group--light {
-  background: #efefef;
+  background-color: #efefef;
   color: #333;
 }
 
@@ -217,7 +216,7 @@ ul {
 }
 
 .copy--light h2 {
-  color: #ccc;
+  color: rgba(255,255,255,.5);
 }
 
 .partner__list {
