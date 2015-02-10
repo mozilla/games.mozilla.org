@@ -1,0 +1,15 @@
+{
+  "short_name": "Moz GDC15",
+  "name": "Mozilla GDC 2015",
+  "icons": [
+    {
+      "src": "https://mozorg.cdn.mozilla.net/media/img/favicon/favicon-196x196.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "density": "4.0"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}
