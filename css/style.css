@@ -374,6 +374,8 @@ ul {
 }
 
 .involved__item strong {
+  color: rgba(0,0,0,.5);
+  font-weight: 400;
   margin-right: 5px;
 }
 
