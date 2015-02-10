@@ -161,6 +161,14 @@ address {
   width: 33.3333%;
 }
 
+.col--33 + .col--33 {
+  padding-left: 5px;
+}
+
+.col--33:nth-child(3) {
+  padding-left: 10px;
+}
+
 h3 {
   font-weight: 400;
 }
