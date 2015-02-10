@@ -377,10 +377,6 @@ ul {
   margin-right: 5px;
 }
 
-.group--footer {
-  background: rgba(0,0,0,.5);
-}
-
 .footer__logo {
   border: 0;
   display: block;
