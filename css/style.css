@@ -104,6 +104,10 @@ h2 {
   text-transform: uppercase;
 }
 
+h2 + p {
+  margin-bottom: 15px;
+}
+
 p {
   font-size: 22px;
 }
@@ -167,6 +171,11 @@ address {
 
 .col--33:nth-child(3) {
   padding-left: 10px;
+}
+
+/* For "Get Involved" and Mozilla Footer columns */
+.col--33 li + li {
+  margin-top: 5px;
 }
 
 h3 {
@@ -383,10 +392,6 @@ ul {
   border: 0;
   display: block;
   width: 100%;
-}
-
-.footer__item + .footer__item {
-  margin-top: 5px;
 }
 
 /* use flexbox to stretch a bunch of items in a container, with
