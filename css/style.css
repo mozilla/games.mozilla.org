@@ -159,7 +159,7 @@ h2 {
   text-transform: uppercase;
 }
 
-h2 + p {
+.group--event p {
   margin-bottom: 15px;
 }
 
@@ -237,7 +237,7 @@ h3 {
   font-weight: 400;
 }
 
-p + h3 {
+dl {
   margin-top: 10px;
 }
 
@@ -248,15 +248,6 @@ dt {
 
 dd {
   font-weight: 300;
-}
-
-big {
-  font-size: 22px;
-}
-
-.event__location__address__booth {
-  font-size: 22px;
-  margin-bottom: 12px;
 }
 
 ul {
