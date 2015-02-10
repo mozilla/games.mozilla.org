@@ -1,3 +1,6 @@
+importScripts('js/serviceworker-cache-polyfill.js');
+
+
 var CACHE_NAME = 'moz-gdc';
 var CACHE_VERSION = 1;
 var CACHE_KEY = CACHE_NAME + '-v' + CACHE_VERSION;
@@ -47,7 +50,7 @@ self.onfetch = function (event) {
       // `cache.put()` later on. Both `fetch() and `cache.put()` "consume"
       // the request, so we need to make a copy.
       // (See https://fetch.spec.whatwg.org/#dom-request-clone)
-      return fetch(event.request.clone()).then(function(response) {
+      return fetch(event.request).then(function (response) {
         console.log('    Response for %s from network: %O',
                     event.request.url, response);
 
@@ -61,8 +64,15 @@ self.onfetch = function (event) {
           // get to keep the original response object which we will return
           // back to the controlled page.
           // (See https://fetch.spec.whatwg.org/#dom-response-clone)
-          console.log('    Caching the response to', event.request.url);
-          cache.put(event.request, response.clone());
+          caches.open(CACHE_KEY).then(function (cache) {
+            console.log('    Caching the response to', event.request.url);
+            return cache.put(event.request, response.clone());
+          }).catch(function (err) {
+            // Likely we got an opaque response which the polyfill can't deal
+            // with, so show a warning.
+            console.warn('    Could not cache ' + requestURL + ': ' +
+                         err.message);
+          });
         } else {
           console.log('    Not caching the response to', event.request.url);
         }
