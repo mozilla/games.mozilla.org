@@ -110,6 +110,7 @@ body {
   background: url(../img/mozilla.svg) no-repeat;
   background-size: auto 30px;
   height: 30px;
+  min-width: 80px;
   width: 80px;
 }
 
@@ -163,10 +164,6 @@ h2 {
   margin-bottom: 15px;
 }
 
-p {
-  font-size: 22px;
-}
-
 a {
   border-bottom: 1px solid rgba(0,180,214,.25);
   color: rgb(0,180,214);
@@ -201,36 +198,6 @@ a:hover {
 
 address {
   font-style: normal;
-}
-
-/* deal with these floats until I turn these into flexboxes */
-.col {
-  float: left;
-}
-
-.col--40 {
-  width: 40%;
-}
-
-.col--20 {
-  width: 20%;
-}
-
-.col--33 {
-  width: 33.3333%;
-}
-
-.col--33 + .col--33 {
-  padding-left: 5px;
-}
-
-.col--33:nth-child(3) {
-  padding-left: 10px;
-}
-
-/* For "Get Involved" and Mozilla Footer columns */
-.col--33 li + li {
-  margin-top: 5px;
 }
 
 h3 {
@@ -273,6 +240,10 @@ ul {
   color: #333;
 }
 
+.copy--important {
+  font-size: 22px;
+}
+
 .copy--light,
 .copy--light h2 {
   color: #fff;
@@ -282,24 +253,8 @@ ul {
   color: rgba(255,255,255,.5);
 }
 
-.partner__list {
-  min-height: 75px;
-}
-
-.partner__item {
-  min-width: 150px;
-}
-
 .partner__item + .partner__item {
   margin-left: 10px;
-}
-
-.partner__item--epic {
-  min-width: 66px;
-}
-
-.partner__item--king {
-  min-width: 111px;
 }
 
 .partner__item a,
@@ -313,7 +268,7 @@ ul {
 
 .partner__item img {
   max-height: 75px;
-  max-width: 150px;
+  max-width: 100%;
 }
 
 .demo__item a:before {
@@ -354,13 +309,10 @@ ul {
   background: #fff;
 }
 
-.demo__item {
-  max-width: 400px;
-}
-
 .demo__item a {
   border: 0;
   display: block;
+  width: 100%;
 }
 
 .demo__item a:hover {
@@ -410,10 +362,6 @@ ul {
 
 .demo__item__details {
   padding: 15px;
-}
-
-.group--announcements {
-  font-size: 22px;
 }
 
 .announcement__item +.announcement__item {
@@ -483,6 +431,92 @@ ul {
   }
 }
 
+@media (max-width: 799px) {
+  .partner__list {
+    margin-top: 15px;
+  }
+
+  .announcement__item +.announcement__item {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 499px) {
+  .wrap {
+    padding: 15px;
+  }
+
+  .copy--important {
+    font-size: 18px; 
+  }
+
+  .copy--light h2 {
+    color: rgba(255,255,255,.75);
+  }
+
+  .gdc__text--gdc {
+    font-size: 18px;
+  }
+
+  .gdc__text--gdc--location {
+    font-size: 14px;
+  }
+
+  .partner__list {
+    margin-top: 10px;
+  }
+
+  .demo__item__details {
+    padding: 10px;
+  }
+
+  .demo__item h3 {
+    font-size: 16px;
+  }
+
+  .event__location__address p {
+    margin-bottom: 0;
+  }
+
+  .col--33 + .col--33 {
+    margin-top: 15px;
+  }
+
+  .col--33 li {
+    display: inline-block;
+  }
+
+  .col--33 li + li:before {
+    color: rgba(255,255,255,.5);
+    content: '\00a0•\00a0\00a0';
+  }
+
+  .footer__list {
+    font-size: 12px;
+  }
+
+  .group--footer .col--33 + .col--33 {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 500px) {
+  .wrap--cols {
+    /* old flexbox */
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-justify-content: space-between;
+
+    /* new flexbox */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .wrap--cols .col + .col {
+    padding-left: 10px;
+  }
+}
+
 @media (min-width: 600px) {
   .flex--variable > li {
     -webkit-flex-basis: 50%;
@@ -494,5 +528,34 @@ ul {
   .flex--variable > li {
     -webkit-flex-basis: 33.3333%;
     flex-basis: 33.3333%;
+  }
+
+  .col {
+    float: left;
+  }
+
+  .col--33 {
+    width: 33.3333%;
+  }
+
+  .col--33 + .col--33 {
+    padding-left: 5px;
+  }
+
+  .col--33:nth-child(3) {
+    padding-left: 10px;
+  }
+
+  /* For "Get Involved" and Mozilla Footer columns */
+  .col--33 li + li {
+    margin-top: 5px;
+  }
+
+  .partner__list {
+    min-height: 75px;
+  }
+
+  .partner__item img {
+    max-width: 130px;
   }
 }
