@@ -47,3 +47,7 @@ Alternatively:
 To run the server à la Heroku:
 
     foreman start web
+
+To set Basic Auth for the `/gdc/` directory, for example:
+
+    heroku config:set AUTH_GDC=mozilla:mozilla

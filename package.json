@@ -16,6 +16,7 @@
   "main": "./index",
   "version": "0.0.2",
   "dependencies": {
+    "basic-auth": "^1.0.0",
     "forever": "^0.14.1",
     "node-static": "^0.7.6"
   },
