@@ -253,6 +253,10 @@ ul {
   color: rgba(255,255,255,.5);
 }
 
+.partner__list {
+  margin-top: 10px;
+}
+
 .partner__item + .partner__item {
   margin-left: 10px;
 }
@@ -446,10 +450,6 @@ ul {
 
   .gdc__text--gdc--location {
     font-size: 14px;
-  }
-
-  .partner__list {
-    margin-top: 10px;
   }
 
   .demo__item__details {
