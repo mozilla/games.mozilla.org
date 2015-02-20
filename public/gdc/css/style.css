@@ -156,8 +156,12 @@ h2 {
   color: #666;
   font-size: 12px;
   font-weight: 300;
-  margin-bottom: 5px;
+  margin: 30px 0 5px;
   text-transform: uppercase;
+}
+
+h2:first-child {
+  margin-top: 0;
 }
 
 .group--event p {
@@ -368,8 +372,14 @@ ul {
   padding: 15px;
 }
 
+.post__item small {
+  color: #999;
+  display: inline-block;
+  min-width: 45px;
+}
+
 .post__item + .post__item {
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 .footer__logo {
@@ -520,11 +530,15 @@ ul {
     float: left;
   }
 
+  .col--50 {
+    width: 50%;
+  }
+
   .col--33 {
     width: 33.3333%;
   }
 
-  .col--33 + .col--33 {
+  .col + .col {
     padding-left: 5px;
   }
 
