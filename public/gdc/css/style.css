@@ -368,7 +368,7 @@ ul {
   padding: 15px;
 }
 
-.announcement__item +.announcement__item {
+.post__item + .post__item {
   margin-top: 5px;
 }
 
@@ -426,7 +426,7 @@ ul {
     margin-top: 15px;
   }
 
-  .announcement__item +.announcement__item {
+  .post__item + .post__item {
     margin-top: 10px;
   }
 }
