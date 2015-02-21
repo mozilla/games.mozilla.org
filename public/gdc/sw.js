@@ -54,7 +54,7 @@ self.onfetch = function (event) {
         console.log('    Response for %s from network: %O',
                     event.request.url, response);
 
-        if (response.status < 400) {
+        if (event.request.url.substr(-6) !== '/sw.js' && response.status < 400) {
           // This avoids caching responses that we know are errors (i.e.,
           // HTTP status codes of 4xx or 5xx). Note that for opaque filtered
           // responses (https://fetch.spec.whatwg.org/#concept-filtered-response-opaque)
