@@ -25,7 +25,7 @@ To serve the site from the simple server:
 
 To run the server on a different port, set the `MOZ_GAMES_HOST` and `MOZ_GAMES_PORT` environment variables.
 
-To tempoarily disable Service Worker caching (for ease of testing), run this from your browser console:
+To temporarily disable Service Worker caching (for ease of testing), run this from your browser console:
 
     localStorage.disable_sw = '1'
 
