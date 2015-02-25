@@ -1,0 +1,7 @@
+<script>
+  var qs_player = /[\?&]player=([\w\-]+)/i.exec(window.location.search);
+  player = qs_player && qs_player[1];
+
+  window.location.href = 'https://moz-tanx.herokuapp.com/gamepad-host.html?player=' +
+  						 (player || '') + '&ws_url=https://moz-tanx.herokuapp.com/socket';
+</script>
