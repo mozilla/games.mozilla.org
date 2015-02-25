@@ -16,15 +16,6 @@
     </style>
   </head>
   <body>
-    <iframe id="game"></iframe>
-    <script>
-      (function () {
-        var qs_player = /[\?&]player=([\w\-]+)/i.exec(window.location.search);
-        player = (qs_player && qs_player[1]) || '';
-
-        var game = document.querySelector('#game');
-        game.src = 'https://moz-tanx.herokuapp.com/';
-      })();
-    </script>
+    <iframe id="game" src="https://moz-tanx.herokuapp.com/"></iframe>
   </body>
 </html>
