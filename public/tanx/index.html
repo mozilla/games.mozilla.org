@@ -1,7 +1,31 @@
-<script>
-  var qs_player = /[\?&]player=([\w\-]+)/i.exec(window.location.search);
-  player = qs_player && qs_player[1];
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>TANX gamepad</title>
+    <style>
+      #gamepad {
+        border: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe id="gamepad"></iframe>
+    <script>
+      (function () {
+        var qs_player = /[\?&]player=([\w\-]+)/i.exec(window.location.search);
+        player = (qs_player && qs_player[1]) || '';
 
-  window.location.href = 'https://moz-tanx.herokuapp.com/gamepad-host.html?player=' +
-  						 (player || '') + '&ws_url=https://moz-tanx.herokuapp.com/socket';
-</script>
+        var gp = document.querySelector('#gamepad');
+        gp.src = 'https://moz-tanx.herokuapp.com/gamepad-host.html?player=' +
+                 player + '&ws_url=https://moz-tanx.herokuapp.com/socket';
+      })();
+    </script>
+  </body>
+</html>
