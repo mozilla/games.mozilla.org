@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>TANX</title>
+    <title>TANX gamepad</title>
     <style>
-      #game {
+      #gamepad {
         border: 0;
         height: 100%;
         position: absolute;
@@ -16,14 +16,15 @@
     </style>
   </head>
   <body>
-    <iframe id="game"></iframe>
+    <iframe id="gamepad"></iframe>
     <script>
       (function () {
         var qs_player = /[\?&]player=([\w\-]+)/i.exec(window.location.search);
         player = (qs_player && qs_player[1]) || '';
 
-        var game = document.querySelector('#game');
-        game.src = 'https://moz-tanx.herokuapp.com/';
+        var gp = document.querySelector('#gamepad');
+        gp.src = 'https://moz-tanx.herokuapp.com/gamepad-host.html?player=' +
+                 player + '&ws_url=https://moz-tanx.herokuapp.com/socket';
       })();
     </script>
   </body>
