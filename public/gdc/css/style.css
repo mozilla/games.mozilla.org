@@ -397,24 +397,23 @@ ul {
 }
 
 .demo__item--prime-world-defenders a:before {
-  background-image: url(../img/demos/chase/1.jpg);
+  background-image: url(../img/demos/prime-world-defenders/1.png);
 }
 
-.demo__item--epic-unreal-engine-with-webvr a:before {
-  background-image: url(../img/demos/unreal-engine-with-webvr/2.png);
+.demo__item--the-marvellous-miss-take a:before {
+  background-image: url(../img/demos/miss-take/9.jpg);
+}
+
+.demo__item--tanx a:before {
+  background-image: url(../img/demos/tanx/1.png);
+}
+
+.demo__item--future-web-technologies a:before {
+  background-image: url(../img/demos/future-web-technologies/sechelt-2.png);
 }
 
 .demo__item--dev-tools a:before {
   background-image: url(../img/demos/oculus-rex/1.jpg);
-}
-
-.demo__item--tanx a:before {
-  background-size: 100% 100%;
-  background-image: url(../img/demos/tanx/1.png);
-}
-
-.demo__item--the-marvellous-miss-take a:before {
-  background-image: url(../img/demos/miss-take/6.png);
 }
 
 .demo__item img {
