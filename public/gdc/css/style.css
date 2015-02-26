@@ -144,16 +144,9 @@ a {
 }
 
 .mozilla-logo {
-  background: url(../img/mozilla.svg) no-repeat;
+  background: url(../img/mozilla.svg) 0 -4px no-repeat;
   background-size: auto 100%;
-}
-
-.footer__mozilla {
-  border: 0;
-  display: block;
-  height: 30px;
-  min-width: 80px;
-  width: 100%;
+  height: 32px;
 }
 
 .gdc__mozilla {
@@ -162,6 +155,11 @@ a {
   margin-bottom: 5px;
   min-width: auto;
   width: auto;
+}
+
+.footer__mozilla {
+  display: block;
+  width: 100%;
 }
 
 .gdc__logo {
@@ -430,6 +428,15 @@ ul {
   margin-top: 8px;
 }
 
+.footer__list li {
+  display: inline-block;
+}
+
+.footer__list li + li:before {
+  color: rgba(255,255,255,.5);
+  content: '\00a0•\00a0\00a0';
+}
+
 /* use flexbox to stretch a bunch of items in a container, with
    horizontal space between each item (and each vertical centred). */
 .flex--spread {
@@ -516,25 +523,8 @@ ul {
     margin-bottom: 0;
   }
 
-  .col--33 + .col--33 {
-    margin-top: 15px;
-  }
-
-  .col--33 li {
-    display: inline-block;
-  }
-
-  .col--33 li + li:before {
-    color: rgba(255,255,255,.5);
-    content: '\00a0•\00a0\00a0';
-  }
-
   .footer__list {
     font-size: 12px;
-  }
-
-  .group--footer .col--33 + .col--33 {
-    margin-top: 10px;
   }
 }
 
@@ -571,21 +561,8 @@ ul {
     width: 50%;
   }
 
-  .col--33 {
-    width: 33.3333%;
-  }
-
   .col + .col {
     padding-left: 5px;
-  }
-
-  .col--33:nth-child(3) {
-    padding-left: 10px;
-  }
-
-  /* For "Get Involved" and Mozilla Footer columns */
-  .col--33 li + li {
-    margin-top: 5px;
   }
 
   .partner__list {
