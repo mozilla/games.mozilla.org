@@ -300,7 +300,7 @@ ul {
 
 .demo__item__details {
   overflow: hidden;
-  text-align: center;
+  /*text-align: center;*/
   top: 170px;
   transition: all .3s ease;
 }
@@ -319,6 +319,7 @@ ul {
 
 .demo__item a:hover .demo__item__details {
   background-color: rgba(0,0,0,.8);
+  text-align: center;
   top: 0;
 }
 
@@ -354,10 +355,12 @@ ul {
 
 .demo__item__tagline {
   color: rgba(255,255,255,.65);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 300;
+  /*
   letter-spacing: .25px;
   text-transform: uppercase;
+  */
   /* text-overflow: ellipsis; */
 }
 
