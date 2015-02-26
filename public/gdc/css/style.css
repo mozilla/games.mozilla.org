@@ -190,7 +190,7 @@ a {
 
 .wrap {
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 1084px;  /* 1024px + 60px padding */
   padding: 30px;
 }
 
@@ -272,7 +272,7 @@ ul {
 }
 
 .partner__item + .partner__item {
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .partner__item a,
@@ -280,13 +280,13 @@ ul {
   display: block;
 }
 
-.partner__item a {
-  border: 0;
+.partner__list {
+  flex-wrap: wrap;
 }
 
 .partner__item img {
-  max-height: 75px;
-  max-width: 100%;
+  max-height: 60px;
+  max-width: 150px;
 }
 
 .group--demos {
@@ -590,10 +590,6 @@ ul {
   }
 
   .partner__list {
-    min-height: 75px;
-  }
-
-  .partner__item img {
-    max-width: 130px;
+    min-height: 60px;
   }
 }
