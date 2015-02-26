@@ -70,6 +70,47 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+a {
+  text-decoration: none;
+  transition: .1s ease-in;
+}
+
+.copy a {
+  color: rgb(0,180,214);
+}
+
+.copy a:hover {
+  color: #eddfff;
+}
+
+.copy a {
+  border-bottom: 1px solid rgba(0,180,214,.25);
+}
+
+.copy a:hover {
+  border-bottom-color: #eddfff;
+}
+
+.group--dark a {
+  border-bottom-color: #def;
+  color: #def;
+}
+
+.group--dark a:hover {
+  border-bottom-color: #fff;
+  color: #fff;
+}
+
+.group--event a {
+  border-bottom-color: #ffcb00;
+  color: #ffcb00;
+}
+
+.group--light a:hover {
+  border-bottom-color: #369;
+  color: #369;
+}
+
 .c:after {
   content: '';
   clear: both;
@@ -77,6 +118,7 @@ body {
 }
 
 .hidden-text {
+  display: block;
   text-indent: -9999px;
 }
 
@@ -101,17 +143,12 @@ body {
   z-index: 1;
 }
 
-.gdc__logo--mozilla,
-.gdc__logo--gdc {
-  margin: 0 auto;
-}
-
 .mozilla-logo {
   background: url(../img/mozilla.svg) no-repeat;
   background-size: auto 100%;
 }
 
-.footer__logo {
+.footer__mozilla {
   border: 0;
   display: block;
   height: 30px;
@@ -119,7 +156,7 @@ body {
   width: 100%;
 }
 
-.gdc__logo--mozilla {
+.gdc__mozilla {
   background-position: center;
   height: 32px;
   margin-bottom: 5px;
@@ -127,25 +164,26 @@ body {
   width: auto;
 }
 
-.gdc__logo--gdc {
+.gdc__logo {
   background: url(../img/logos/gdc15.svg) center no-repeat;
   background-size: auto 100%;
   height: 30px;
   margin-bottom: 10px;
 }
 
-.gdc__text--gdc {
+.gdc__link {
   color: #9df;
+  display: block;
   font-size: 24px;
   font-weight: 300;
+  line-height: 1.4;
 }
 
-.group--about-gdc {
-  margin-top: 30px;
-  text-align: left;
+.gdc__link:hover {
+  color: #fff;
 }
 
-.gdc__text--gdc--location {
+.gdc__location {
   display: block;
   font-size: 18px;
 }
@@ -174,38 +212,6 @@ h2:first-child {
 
 .group--event p {
   margin-bottom: 15px;
-}
-
-a {
-  border-bottom: 1px solid rgba(0,180,214,.25);
-  color: rgb(0,180,214);
-  text-decoration: none;
-  transition: .1s ease-in;
-}
-
-a:hover {
-  border-bottom-color: #eddfff;
-  color: #eddfff;
-}
-
-.group--dark a {
-  border-bottom-color: #def;
-  color: #def;
-}
-
-.group--dark a:hover {
-  border-bottom-color: #fff;
-  color: #fff;
-}
-
-.group--event a {
-  border-bottom-color: #ffcb00;
-  color: #ffcb00;
-}
-
-.group--light a:hover {
-  border-bottom-color: #369;
-  color: #369;
 }
 
 address {
@@ -499,7 +505,7 @@ ul {
     font-size: 18px;
   }
 
-  .gdc__text--gdc--location {
+  .gdc__location {
     font-size: 14px;
   }
 
