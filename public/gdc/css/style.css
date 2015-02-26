@@ -309,23 +309,34 @@ ul {
   background: rgb(0,150,221);
   color: #fff;
   display: inline-block;
-  margin-top: 10px;
+  font-weight: 500;
+  letter-spacing: .25px;
+  margin: 10px auto 0;
   opacity: 0;
   padding: 5px 20px;
   text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: .25px;
+  width: 100px;
+/*
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+*/
 }
+
 
 .demo__item a:hover .demo__item__details {
   background-color: rgba(0,0,0,.8);
   text-align: center;
   top: 0;
+
+  /* TODO: make this flexbox work with old flexbox syntax. */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .demo__item a:hover .demo__item__title {
   font-size: 36px;
-  padding-top: 60px;
 }
 
 .demo__item a:hover .demo__item__tagline {
