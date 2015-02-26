@@ -287,12 +287,86 @@ ul {
   max-width: 100%;
 }
 
+.group--demos {
+  background: #fff;
+}
+
+.demo__item a {
+  border: 0;
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.demo__item__details {
+  overflow: hidden;
+  text-align: center;
+  top: 170px;
+  transition: all .3s ease;
+}
+
+.demo__item__view {
+  background: rgb(0,150,221);
+  color: #fff;
+  display: inline-block;
+  margin-top: 10px;
+  opacity: 0;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: .25px;
+}
+
+.demo__item a:hover .demo__item__details {
+  background-color: rgba(0,0,0,.8);
+  top: 0;
+}
+
+.demo__item a:hover .demo__item__title {
+  font-size: 36px;
+  padding-top: 60px;
+}
+
+.demo__item a:hover .demo__item__tagline {
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.demo__item a:hover .demo__item__view {
+  opacity: 1;
+}
+
+.demo__item__details {
+  background-color: rgba(0,0,0,.6);
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  width: 100%;
+}
+
+.demo__item .demo__item__title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+  /* text-overflow: ellipsis; */
+}
+
+.demo__item__tagline {
+  color: rgba(255,255,255,.65);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: .25px;
+  text-transform: uppercase;
+  /* text-overflow: ellipsis; */
+}
+
 .demo__item a:before {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   content: '';
   display: block;
-  min-height: 130px;
+  min-height: 250px;
   width: 100%;
 }
 
@@ -300,7 +374,7 @@ ul {
   background-image: url(../img/demos/teleporter/1.jpg);
 }
 
-.demo__item--chase a:before {
+.demo__item--prime-world-defenders a:before {
   background-image: url(../img/demos/chase/1.jpg);
 }
 
@@ -308,7 +382,7 @@ ul {
   background-image: url(../img/demos/unreal-engine-with-webvr/2.png);
 }
 
-.demo__item--oculus-rex a:before {
+.demo__item--dev-tools a:before {
   background-image: url(../img/demos/oculus-rex/1.jpg);
 }
 
@@ -321,59 +395,8 @@ ul {
   background-image: url(../img/demos/miss-take/6.png);
 }
 
-.group--demos {
-  background: #fff;
-}
-
-.demo__item a {
-  border: 0;
-  display: block;
-  width: 100%;
-}
-
-.demo__item a:hover {
-  background: rgba(0,180,214,.25);
-  color: #111;
-}
-
-.demo__item a:hover h3 {
-  border-bottom-color: transparent;
-  color: #369;
-}
-
-.demo__item a:hover p {
-  color: #333;
-}
-
-.demo__item a:hover ul {
-  color: #555;
-}
-
-.demo__item h3 {
-  border-bottom: 1px solid #ccc;
-  color: #333;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 10px;
-  transition: .1s ease-in border-bottom, .1s ease-in color;
-}
-
-.demo__item p {
-  color: #555;
-  font-size: 14px;
-}
-
-.demo__list ul {
-  color: #888;
-  font-size: 12px;
-  margin-top: 5px;
-}
-
 .demo__item img {
   display: none;
-  max-height: 200px;
-  max-width: 100%;
 }
 
 .demo__item__details {
@@ -468,7 +491,7 @@ ul {
     padding: 10px;
   }
 
-  .demo__item h3 {
+  .demo__item .demo__item__title {
     font-size: 16px;
   }
 
@@ -523,11 +546,6 @@ ul {
 }
 
 @media (min-width: 800px) {
-  .flex--variable > li {
-    -webkit-flex-basis: 33.3333%;
-    flex-basis: 33.3333%;
-  }
-
   .col {
     float: left;
   }
