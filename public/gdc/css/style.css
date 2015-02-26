@@ -300,19 +300,21 @@ ul {
 
 .demo__item__details {
   overflow: hidden;
+  max-height: 82px;
   /*text-align: center;*/
-  top: 170px;
+  /*top: 50px;*/
   transition: all .3s ease;
 }
 
 .demo__item__view {
-  background: rgb(0,150,221);
+  background-color: rgb(0,150,221);
   color: #fff;
-  display: inline-block;
+  display: none;
   font-weight: 500;
   letter-spacing: .25px;
   margin: 10px auto 0;
   opacity: 0;
+  /*transition: opacity .5s ease-in 1s;*/
   padding: 5px 20px;
   text-transform: uppercase;
   width: 100px;
@@ -323,11 +325,11 @@ ul {
 */
 }
 
-
 .demo__item a:hover .demo__item__details {
   background-color: rgba(0,0,0,.8);
+  height: 100%;
+  max-height: 100%;
   text-align: center;
-  top: 0;
 
   /* TODO: make this flexbox work with old flexbox syntax. */
   display: flex;
@@ -337,14 +339,18 @@ ul {
 
 .demo__item a:hover .demo__item__title {
   font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 5px;
 }
 
 .demo__item a:hover .demo__item__tagline {
   font-size: 16px;
   letter-spacing: 0;
+  margin-bottom: 5px;
 }
 
 .demo__item a:hover .demo__item__view {
+  display: inline-block;
   opacity: 1;
 }
 
@@ -352,7 +358,7 @@ ul {
   background-color: rgba(0,0,0,.6);
   position: absolute;
   bottom: 0;
-  padding: 20px;
+  padding: 15px;
   width: 100%;
 }
 
@@ -411,10 +417,6 @@ ul {
 
 .demo__item img {
   display: none;
-}
-
-.demo__item__details {
-  padding: 15px;
 }
 
 .post__item small {
@@ -552,7 +554,7 @@ ul {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   .flex--variable > li {
     -webkit-flex-basis: 50%;
     flex-basis: 50%;
