@@ -25,7 +25,19 @@ var server = http.createServer(function (req, res) {
   }
 
   req.addListener('end', function () {
-    internals.fileServer.serve(req, res);
+    internals.fileServer.serve(req, res, function (err) {
+      if (!err) {
+        return;
+      }
+
+      if (err.status !== 200) {
+        console.warn('[GET] [%s] %s', err.status, req.url);
+      }
+
+      if (err.status === 404) {
+        internals.fileServer.serveFile('/404.html', 404, {}, req, res);
+      }
+    });
   }).resume();
 });
 
