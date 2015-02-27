@@ -32,6 +32,11 @@ var server = http.createServer(function (req, res) {
             blocks[3] >=0 && blocks[3] <= 255);
   }
 
+  if (req.url === '/ip') {
+    res.writeHead(200, {});
+    return res.end(req.connection.remoteAddress);
+  }
+
   if (!ipInRange(req.connection.remoteAddress) &&
       process.env.AUTH_GDC && req.url.indexOf('/gdc/') === 0 && !authValid) {
 
