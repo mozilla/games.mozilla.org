@@ -33,8 +33,13 @@ var server = http.createServer(function (req, res) {
   }
 
   if (req.url === '/ip') {
-    res.writeHead(200, {});
-    return res.end(req.connection.remoteAddress);
+    res.writeHead(200, {'content-type': 'application/json'});
+    return res.end(JSON.stringify({
+      'req.connection.remoteAddress': req.connection.remoteAddress,
+      'req.connection.socket.remoteAddress': req.connection.socket && req.connection.socket.remoteAddress,
+      'req.socket.remoteAddress': req.socket && req.socket.remoteAddress,
+      'x-forwarded-for': req.headers['x-forwarded-for']
+    }));
   }
 
   if (!ipInRange(req.connection.remoteAddress) &&
