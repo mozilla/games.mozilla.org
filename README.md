@@ -36,9 +36,9 @@ To resume Service Worker caching, run this from your browser console:
 
 ## Deployment
 
-In production, the server is run continuously via [forever](https://github.com/foreverjs/forever):
+In production, the server is run like so:
 
-    NODE_ENVIRONMENT=production forever start -al forever.log -o logs/out.log -e logs/err.log index.js
+    NODE_ENVIRONMENT=production node index.js
 
 Alternatively:
 

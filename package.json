@@ -10,14 +10,12 @@
   "scripts": {
     "start": "NODE_ENVIRONMENT=production node index.js",
     "dev": "NODE_ENVIRONMENT=dev nodemon index.js",
-    "prod": "NODE_ENVIRONMENT=production forever start -al forever.log -o logs/out.log -e logs/err.log index.js",
-    "stop-prod": "forever stop index.js"
+    "prod": "NODE_ENVIRONMENT=production node index.js"
   },
   "main": "./index",
   "version": "0.0.2",
   "dependencies": {
     "basic-auth": "^1.0.0",
-    "forever": "^0.14.1",
     "node-static": "^0.7.6"
   },
   "devDependencies": {
