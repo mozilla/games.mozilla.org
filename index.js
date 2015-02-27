@@ -18,6 +18,9 @@ var server = http.createServer(function (req, res) {
                    credentials.name === authChunks[0] &&
                    credentials.pass === authChunks[1]);
 
+  console.log('[%s] %s – %s', new Date().toJSON(),
+    req.connection.remoteAddress, req.url);
+
   // Protect only the `/gdc/` directory.
   if (req.connection.remoteAddress.indexOf('10.252') !== 0 &&
       process.env.AUTH_GDC && req.url.indexOf('/gdc/') === 0 && !authValid) {
