@@ -22,7 +22,17 @@ var server = http.createServer(function (req, res) {
     req.connection.remoteAddress, req.url);
 
   // Protect only the `/gdc/` directory.
-  if (req.connection.remoteAddress.indexOf('10.252') !== 0 &&
+  function ipInRange(ip) {
+    var blocks = ip.split('.').map(function (num) {
+      return parseInt(num, 10);
+    });
+    return (blocks[0] === 63 &&
+            blocks[1] === 245 &&
+            blocks[2] >= 208 && blocks[2] <= 223 &&
+            blocks[3] >=0 && blocks[3] <= 255);
+  }
+
+  if (!ipInRange(req.connection.remoteAddress) &&
       process.env.AUTH_GDC && req.url.indexOf('/gdc/') === 0 && !authValid) {
 
     return internals.fileServer.serveFile('/401.html', 401,
