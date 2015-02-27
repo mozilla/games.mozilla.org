@@ -42,7 +42,7 @@ var server = http.createServer(function (req, res) {
     }));
   }
 
-  if (!ipInRange(req.connection.remoteAddress) &&
+  if (!ipInRange(req.headers['x-forwarded-for']) &&
       process.env.AUTH_GDC && req.url.indexOf('/gdc/') === 0 && !authValid) {
 
     return internals.fileServer.serveFile('/401.html', 401,
