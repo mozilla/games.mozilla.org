@@ -70,6 +70,42 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+a {
+  text-decoration: none;
+  transition: .1s ease-in;
+}
+
+.copy a {
+  color: rgb(0,180,214);
+}
+
+.copy a:hover {
+  color: #eddfff;
+}
+
+.copy a {
+  border-bottom: 1px solid rgba(0,180,214,.25);
+}
+
+.copy a:hover {
+  border-bottom-color: #eddfff;
+}
+
+.group--dark a {
+  border-bottom-color: #def;
+  color: #def;
+}
+
+.group--dark a:hover {
+  border-bottom-color: #fff;
+  color: #fff;
+}
+
+.group--light a:hover {
+  border-bottom-color: #369;
+  color: #369;
+}
+
 .c:after {
   content: '';
   clear: both;
@@ -77,6 +113,7 @@ body {
 }
 
 .hidden-text {
+  display: block;
   text-indent: -9999px;
 }
 
@@ -101,103 +138,65 @@ body {
   z-index: 1;
 }
 
-.gdc__logo--mozilla,
-.gdc__logo--gdc {
-  margin: 0 auto;
-}
-
 .mozilla-logo {
-  background: url(../img/mozilla.svg) no-repeat;
-  background-size: auto 30px;
+  background: url(../img/mozilla.svg) 0 -4px no-repeat;
+  background-size: auto 100%;
+  height: 32px;
+}
+
+.gdc__mozilla {
+  background-position: center;
+  height: 32px;
+  margin-bottom: 5px;
+  min-width: auto;
+  width: auto;
+}
+
+.footer__mozilla {
+  display: block;
+  width: 100%;
+}
+
+.gdc__logo {
+  background: url(../img/logos/gdc15.svg) center no-repeat;
+  background-size: auto 100%;
   height: 30px;
-  min-width: 80px;
-  width: 80px;
-}
-
-.gdc__logo--mozilla {
-  margin-bottom: 15px;
-}
-
-.gdc__logo--gdc {
-  background: url(../img/logos/gdc15.svg) no-repeat;
-  background-size: contain;
-  height: 105px;
   margin-bottom: 10px;
-  width: 300px;
 }
 
-.gdc__text--gdc {
+.gdc__link {
   color: #9df;
+  display: block;
   font-size: 24px;
   font-weight: 300;
+  line-height: 1.4;
 }
 
-.group--about-gdc {
-  margin-top: 30px;
-  text-align: left;
+.gdc__link:hover {
+  color: #fff;
 }
 
-.gdc__text--gdc--location {
+.gdc__location {
   display: block;
   font-size: 18px;
 }
 
 .wrap {
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 1084px;  /* 1024px + 60px padding */
   padding: 30px;
-}
-
-.wrap-tiny {
-  padding: 0 30px;
 }
 
 h2 {
   color: #666;
   font-size: 12px;
   font-weight: 300;
-  margin-bottom: 5px;
+  margin: 30px 0 5px;
   text-transform: uppercase;
 }
 
-.group--event p {
-  margin-bottom: 15px;
-}
-
-a {
-  border-bottom: 1px solid rgba(0,180,214,.25);
-  color: rgb(0,180,214);
-  text-decoration: none;
-  transition: .1s ease-in;
-}
-
-a:hover {
-  border-bottom-color: #eddfff;
-  color: #eddfff;
-}
-
-.group--dark a {
-  border-bottom-color: #def;
-  color: #def;
-}
-
-.group--dark a:hover {
-  border-bottom-color: #fff;
-  color: #fff;
-}
-
-.group--event a {
-  border-bottom-color: #ffcb00;
-  color: #ffcb00;
-}
-
-.group--light a:hover {
-  border-bottom-color: #369;
-  color: #369;
-}
-
-address {
-  font-style: normal;
+h2:first-child {
+  margin-top: 0;
 }
 
 h3 {
@@ -229,10 +228,13 @@ ul {
   background-color: rgb(0,150,221);
 }
 
-.group--event {
-  background-image: url(../img/event.jpg);
-  background-color: rgb(225,39,98);
-  background-repeat: no-repeat;
+.group--posts a {
+  border-bottom-color: #ffcb00;
+  color: #ffcb00;
+}
+
+.group--posts {
+  background: rgb(225,39,98) url(../img/event.jpg) no-repeat;
 }
 
 .group--light {
@@ -253,8 +255,12 @@ ul {
   color: rgba(255,255,255,.5);
 }
 
+.partner__list {
+  margin-top: 10px;
+}
+
 .partner__item + .partner__item {
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .partner__item a,
@@ -262,47 +268,13 @@ ul {
   display: block;
 }
 
-.partner__item a {
-  border: 0;
+.partner__list {
+  flex-wrap: wrap;
 }
 
 .partner__item img {
-  max-height: 75px;
-  max-width: 100%;
-}
-
-.demo__item a:before {
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  content: '';
-  display: block;
-  min-height: 130px;
-  width: 100%;
-}
-
-.demo__item--teleporter a:before {
-  background-image: url(../img/demos/teleporter/1.jpg);
-}
-
-.demo__item--chase a:before {
-  background-image: url(../img/demos/chase/1.jpg);
-}
-
-.demo__item--epic-unreal-engine-with-webvr a:before {
-  background-image: url(../img/demos/unreal-engine-with-webvr/2.png);
-}
-
-.demo__item--oculus-rex a:before {
-  background-image: url(../img/demos/oculus-rex/1.jpg);
-}
-
-.demo__item--tanx a:before {
-  background-size: 100% 100%;
-  background-image: url(../img/demos/tanx/1.png);
-}
-
-.demo__item--the-marvellous-miss-take a:before {
-  background-image: url(../img/demos/miss-take/6.png);
+  max-height: 60px;
+  max-width: 150px;
 }
 
 .group--demos {
@@ -312,66 +284,155 @@ ul {
 .demo__item a {
   border: 0;
   display: block;
+  position: relative;
   width: 100%;
 }
 
-.demo__item a:hover {
-  background: rgba(0,180,214,.25);
-  color: #111;
+.demo__item__details {
+  overflow: hidden;
+  max-height: 82px;
+  /*text-align: center;*/
+  /*top: 50px;*/
+  transition: all .3s ease;
 }
 
-.demo__item a:hover h3 {
-  border-bottom-color: transparent;
-  color: #369;
+.demo__item__view {
+  background-color: rgb(0,150,221);
+  color: #fff;
+  display: none;
+  font-weight: 500;
+  letter-spacing: .25px;
+  margin: 10px auto 0;
+  opacity: 0;
+  /*transition: opacity .5s ease-in 1s;*/
+  padding: 5px 20px;
+  text-transform: uppercase;
+  width: 100px;
+/*
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+*/
 }
 
-.demo__item a:hover p {
-  color: #333;
+.demo__item a:hover .demo__item__details {
+  background-color: rgba(0,0,0,.8);
+  height: 100%;
+  max-height: 100%;
+  text-align: center;
+
+  /* TODO: make this flexbox work with old flexbox syntax. */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.demo__item a:hover ul {
-  color: #555;
+.demo__item a:hover .demo__item__title {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 5px;
 }
 
-.demo__item h3 {
-  border-bottom: 1px solid #ccc;
-  color: #333;
-  font-size: 20px;
-  font-weight: 600;
+.demo__item a:hover .demo__item__tagline {
+  font-size: 16px;
+  letter-spacing: 0;
+  margin-bottom: 5px;
+}
+
+.demo__item a:hover .demo__item__view {
+  display: inline-block;
+  opacity: 1;
+}
+
+.demo__item__details {
+  background-color: rgba(0,0,0,.6);
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  width: 100%;
+}
+
+.demo__item .demo__item__title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
   line-height: 1.4;
-  margin-bottom: 10px;
-  transition: .1s ease-in border-bottom, .1s ease-in color;
+  /* text-overflow: ellipsis; */
 }
 
-.demo__item p {
-  color: #555;
-  font-size: 14px;
+.demo__item__tagline {
+  color: rgba(255,255,255,.65);
+  font-size: 13px;
+  font-weight: 300;
+  /*
+  letter-spacing: .25px;
+  text-transform: uppercase;
+  */
+  /* text-overflow: ellipsis; */
 }
 
-.demo__list ul {
-  color: #888;
-  font-size: 12px;
-  margin-top: 5px;
+.demo__item a:before {
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: '';
+  display: block;
+  min-height: 250px;
+  width: 100%;
+}
+
+.demo__item--teleporter a:before {
+  background-image: url(../img/demos/teleporter/1.jpg);
+}
+
+.demo__item--prime-world-defenders a:before {
+  background-image: url(../img/demos/prime-world-defenders/1.png);
+}
+
+.demo__item--the-marvellous-miss-take a:before {
+  background-image: url(../img/demos/miss-take/9.jpg);
+}
+
+.demo__item--tanx a:before {
+  background-image: url(../img/demos/tanx/1.png);
+}
+
+.demo__item--future-web-technologies a:before {
+  background-image: url(../img/demos/future-web-technologies/sechelt-2.png);
+}
+
+.demo__item--dev-tools a:before {
+  background-image: url(../img/demos/oculus-rex/1.jpg);
 }
 
 .demo__item img {
   display: none;
-  max-height: 200px;
-  max-width: 100%;
 }
 
-.demo__item__details {
-  padding: 15px;
+.post__item small {
+  color: #eee;
+  display: inline-block;
+  min-width: 45px;
 }
 
-.announcement__item +.announcement__item {
-  margin-top: 5px;
+.post__item + .post__item {
+  margin-top: 8px;
 }
 
-.footer__logo {
-  border: 0;
-  display: block;
-  width: 100%;
+.footer__list--legal {
+  float: left;
+}
+
+.footer__list--social {
+  float: right;
+}
+
+.footer__list li {
+  display: inline-block;
+}
+
+.footer__list li + li:before {
+  color: rgba(255,255,255,.5);
+  content: '\00a0•\00a0\00a0';
 }
 
 /* use flexbox to stretch a bunch of items in a container, with
@@ -422,7 +483,7 @@ ul {
     margin-top: 15px;
   }
 
-  .announcement__item +.announcement__item {
+  .post__item + .post__item {
     margin-top: 10px;
   }
 }
@@ -444,19 +505,15 @@ ul {
     font-size: 18px;
   }
 
-  .gdc__text--gdc--location {
+  .gdc__location {
     font-size: 14px;
-  }
-
-  .partner__list {
-    margin-top: 10px;
   }
 
   .demo__item__details {
     padding: 10px;
   }
 
-  .demo__item h3 {
+  .demo__item .demo__item__title {
     font-size: 16px;
   }
 
@@ -464,84 +521,38 @@ ul {
     margin-bottom: 0;
   }
 
-  .col--33 + .col--33 {
-    margin-top: 15px;
-  }
-
-  .col--33 li {
-    display: inline-block;
-  }
-
-  .col--33 li + li:before {
-    color: rgba(255,255,255,.5);
-    content: '\00a0•\00a0\00a0';
-  }
-
   .footer__list {
     font-size: 12px;
   }
-
-  .group--footer .col--33 + .col--33 {
-    margin-top: 10px;
-  }
 }
 
-@media (min-width: 500px) {
-  .wrap--cols {
-    /* old flexbox */
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    -webkit-justify-content: space-between;
-
-    /* new flexbox */
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .wrap--cols .col + .col {
-    padding-left: 10px;
-  }
-}
-
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   .flex--variable > li {
     -webkit-flex-basis: 50%;
     flex-basis: 50%;
   }
 }
 
-@media (min-width: 800px) {
-  .flex--variable > li {
-    -webkit-flex-basis: 33.3333%;
-    flex-basis: 33.3333%;
+@media (max-width: 799px) {
+  .col--50 + .col--50 {
+    padding-top: 30px;
   }
+}
 
+@media (min-width: 800px) {
   .col {
     float: left;
   }
 
-  .col--33 {
-    width: 33.3333%;
+  .col--50 {
+    width: 50%;
   }
 
-  .col--33 + .col--33 {
-    padding-left: 5px;
-  }
-
-  .col--33:nth-child(3) {
+  .col + .col {
     padding-left: 10px;
   }
 
-  /* For "Get Involved" and Mozilla Footer columns */
-  .col--33 li + li {
-    margin-top: 5px;
-  }
-
   .partner__list {
-    min-height: 75px;
-  }
-
-  .partner__item img {
-    max-width: 130px;
+    min-height: 60px;
   }
 }
