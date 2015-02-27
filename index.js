@@ -19,7 +19,9 @@ var server = http.createServer(function (req, res) {
                    credentials.pass === authChunks[1]);
 
   // Protect only the `/gdc/` directory.
-  if (process.env.AUTH_GDC && req.url.indexOf('/gdc/') === 0 && !authValid) {
+  if (req.connection.remoteAddress.indexOf('10.252') !== 0 &&
+      process.env.AUTH_GDC && req.url.indexOf('/gdc/') === 0 && !authValid) {
+
     return internals.fileServer.serveFile('/401.html', 401,
       {'WWW-Authenticate': 'Basic realm="mozgames"'}, req, res);
   }
