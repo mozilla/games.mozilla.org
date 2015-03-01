@@ -18,12 +18,9 @@ var server = http.createServer(function (req, res) {
                    credentials.name === authChunks[0] &&
                    credentials.pass === authChunks[1]);
 
-  console.log('[%s] %s – %s', new Date().toJSON(),
-    req.connection.remoteAddress, req.url);
-
   // Protect only the `/gdc/` directory.
   function ipInRange(ip) {
-    var blocks = ip.split('.').map(function (num) {
+    var blocks = (ip || '').split('.').map(function (num) {
       return parseInt(num, 10);
     });
     return (blocks[0] === 63 &&
@@ -52,12 +49,11 @@ var server = http.createServer(function (req, res) {
   req.addListener('end', function () {
     internals.fileServer.serve(req, res, function (err) {
       if (!err) {
+        console.log('[%s] [200] %s', req.method, req.url);
         return;
       }
 
-      if (err.status !== 200) {
-        console.warn('[GET] [%s] %s', err.status, req.url);
-      }
+      console.warn('[%s] [%s] %s', req.method, err.status, req.url);
 
       if (err.status === 404) {
         internals.fileServer.serveFile('/404.html', 404, {}, req, res);

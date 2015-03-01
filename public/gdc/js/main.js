@@ -24,7 +24,7 @@
   $$('.demo__item').forEach(function (el) {
     el.addEventListener('click', function () {
       // NOTE: Not using dataset for IE compatibility.
-      ga('send', 'event', 'button', 'click', 'demo__item', el.getAttribute('data-demo'));
+      ga('send', 'event', 'demo.click', el.getAttribute('data-demo'));
     });
   });
 
