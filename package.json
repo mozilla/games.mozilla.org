@@ -10,7 +10,9 @@
   "scripts": {
     "start": "NODE_ENVIRONMENT=production node index.js",
     "dev": "NODE_ENVIRONMENT=dev nodemon index.js",
-    "prod": "NODE_ENVIRONMENT=production node index.js"
+    "prod": "NODE_ENVIRONMENT=production node index.js",
+    "gzip": "ls public/**/*.{css,eot,html,js,json,svg,ttf,webapp,woff} | xargs gzip --k -9",
+    "postinstall": "npm run gzip"
   },
   "main": "./index",
   "version": "0.0.2",
