@@ -216,23 +216,23 @@ ul {
   max-width: 150px;
 }
 
-.group--demos {
+.group--highlights {
   background: #fff;
 }
 
-.demo__item a {
+.highlight__item a {
   display: block;
   position: relative;
   width: 100%;
 }
 
-.demo__item__details {
+.highlight__item__details {
   overflow: hidden;
   max-height: 82px;
   transition: all .3s ease;
 }
 
-.demo__item__view {
+.highlight__item__view {
   background-color: rgb(0,150,221);
   color: #fff;
   display: none;
@@ -245,7 +245,7 @@ ul {
   width: 100px;
 }
 
-.demo__item a:hover .demo__item__details {
+.highlight__item a:hover .highlight__item__details {
   background-color: rgba(0,0,0,.8);
   height: 100%;
   max-height: 100%;
@@ -257,24 +257,24 @@ ul {
   flex-direction: column;
 }
 
-.demo__item a:hover .demo__item__title {
+.highlight__item a:hover .highlight__item__title {
   font-size: 36px;
   line-height: 1.2;
   margin-bottom: 5px;
 }
 
-.demo__item a:hover .demo__item__tagline {
+.highlight__item a:hover .highlight__item__tagline {
   font-size: 16px;
   letter-spacing: 0;
   margin-bottom: 5px;
 }
 
-.demo__item a:hover .demo__item__view {
+.highlight__item a:hover .highlight__item__view {
   display: inline-block;
   opacity: 1;
 }
 
-.demo__item__details {
+.highlight__item__details {
   background-color: rgba(0,0,0,.6);
   position: absolute;
   bottom: 0;
@@ -282,20 +282,20 @@ ul {
   width: 100%;
 }
 
-.demo__item .demo__item__title {
+.highlight__item .highlight__item__title {
   color: #fff;
   font-size: 24px;
   font-weight: 500;
   line-height: 1.4;
 }
 
-.demo__item__tagline {
+.highlight__item__tagline {
   color: rgba(255,255,255,.65);
   font-size: 13px;
   font-weight: 300;
 }
 
-.demo__item a:before {
+.highlight__item a:before {
   background-size: cover;
   background-repeat: no-repeat;
   content: '';
@@ -304,31 +304,31 @@ ul {
   width: 100%;
 }
 
-.demo__item--teleporter a:before {
-  background-image: url(../img/demos/teleporter/1.jpg);
+.highlight__item--teleporter a:before {
+  background-image: url(../img/highlights/teleporter/1.jpg);
 }
 
-.demo__item--prime-world-defenders a:before {
-  background-image: url(../img/demos/prime-world-defenders/1.png);
+.highlight__item--prime-world-defenders a:before {
+  background-image: url(../img/highlights/prime-world-defenders/1.png);
 }
 
-.demo__item--the-marvellous-miss-take a:before {
-  background-image: url(../img/demos/miss-take/9.jpg);
+.highlight__item--the-marvellous-miss-take a:before {
+  background-image: url(../img/highlights/miss-take/9.jpg);
 }
 
-.demo__item--tanx a:before {
-  background-image: url(../img/demos/tanx/1.png);
+.highlight__item--tanx a:before {
+  background-image: url(../img/highlights/tanx/1.png);
 }
 
-.demo__item--future-web-technologies a:before {
-  background-image: url(../img/demos/future-web-technologies/sechelt-2.png);
+.highlight__item--future-web-technologies a:before {
+  background-image: url(../img/highlights/future-web-technologies/sechelt-2.png);
 }
 
-.demo__item--dev-tools a:before {
-  background-image: url(../img/demos/oculus-rex/1.jpg);
+.highlight__item--dev-tools a:before {
+  background-image: url(../img/highlights/oculus-rex/1.jpg);
 }
 
-.demo__item img {
+.highlight__item img {
   display: none;
 }
 
@@ -411,11 +411,11 @@ ul {
     font-size: 14px;
   }
 
-  .demo__item__details {
+  .highlight__item__details {
     padding: 10px;
   }
 
-  .demo__item .demo__item__title {
+  .highlight__item .highlight__item__title {
     font-size: 16px;
   }
 

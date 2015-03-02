@@ -81,10 +81,10 @@
     });
   });
 
-  $$('.demo__item').forEach(function (el) {
+  $$('.highlight__item').forEach(function (el) {
     el.addEventListener('click', function () {
       ga('send', 'event', 'click.demo',
-         el.querySelector('.demo__item__title').textContent);
+         el.querySelector('.highlight__item__title').textContent);
     });
   });
 
