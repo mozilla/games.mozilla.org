@@ -8,11 +8,19 @@ var internals = {
   node_env: process.env.NODE_ENVIRONMENT || 'development',
   host: process.env.MOZ_GAMES_HOST || process.env.HOST || '0.0.0.0',
   port: process.env.MOZ_GAMES_PORT || process.env.PORT || 3000,
-  fileServer: new nodeStatic.Server('./public', {gzip: true}),
+  nodeStaticOptions: {gzip: false, cache: false},
   cacheExpiryDates: {
     fonts: 31536000  // 1 year
   }
 };
+
+
+if (internals.node_env === 'production') {
+  internals.nodeStaticOptions = {gzip: true, cache: true};
+}
+
+internals.fileServer = new nodeStatic.Server('./public', internals.nodeStaticOptions);
+
 
 var server = http.createServer(function (req, res) {
   var credentials = basicAuth(req);
