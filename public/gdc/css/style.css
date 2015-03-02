@@ -61,8 +61,8 @@
   padding: 0;
 }
 
-html {
-  background: rgb(0,150,221);
+html, body {
+  background: #fff;
 }
 
 body {
@@ -82,14 +82,13 @@ a {
 
 .copy--bright a:hover {
   border-bottom-color: #eddfff;
-  color: #fff;
 }
 
-.copy--dark a {
+.copy--faint a {
   color: #9df;
 }
 
-.copy--dark a:hover {
+a:hover {
   color: #fff;
 }
 
@@ -181,6 +180,11 @@ ul {
   list-style: none;
 }
 
+.group--footer,
+.highlight__item__view {
+  background-color: rgb(0,150,221);
+}
+
 .group--bright {
   background-color: #efefef;
   color: #333;
@@ -233,7 +237,6 @@ ul {
 }
 
 .highlight__item__view {
-  background-color: rgb(0,150,221);
   color: #fff;
   display: none;
   font-weight: 500;
