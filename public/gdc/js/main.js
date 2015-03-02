@@ -73,10 +73,11 @@
     ga('send', 'event', 'click.header', 'booth-link');
   });
 
-  $$('.partner__item').forEach(function (el) {
+  $$('.company__item').forEach(function (el) {
     el.addEventListener('click', function () {
       // NOTE: Not using dataset for IE compatibility.
-      ga('send', 'event', 'click.partner', el.getAttribute('data-partner'));
+      ga('send', 'event', 'click.company',
+         el.querySelector('img').getAttribute('alt'));
     });
   });
 

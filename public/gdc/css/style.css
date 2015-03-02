@@ -194,24 +194,24 @@ ul {
   background: rgb(225,39,98) url(../img/gdc-pink.jpg) repeat-x;
 }
 
-.partner__list {
+.company__list {
   margin-top: 10px;
 }
 
-.partner__item + .partner__item {
+.company__item + .company__item {
   margin-left: 30px;
 }
 
-.partner__item a,
-.partner__item img {
+.company__item a,
+.company__item img {
   display: block;
 }
 
-.partner__list {
+.company__list {
   flex-wrap: wrap;
 }
 
-.partner__item img {
+.company__item img {
   max-height: 60px;
   max-width: 150px;
 }
@@ -392,7 +392,7 @@ ul {
 }
 
 @media (max-width: 799px) {
-  .partner__list {
+  .company__list {
     margin-top: 15px;
   }
 
@@ -443,7 +443,7 @@ ul {
     padding-left: 10px;
   }
 
-  .partner__list {
+  .company__list {
     min-height: 60px;
   }
 }
