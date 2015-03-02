@@ -11,7 +11,7 @@
     "start": "NODE_ENVIRONMENT=production node index.js",
     "dev": "NODE_ENVIRONMENT=dev nodemon index.js",
     "prod": "NODE_ENVIRONMENT=production node index.js",
-    "gzip": "ls public/**/*.{css,eot,html,js,json,svg,ttf,webapp,woff} | xargs gzip --k -9",
+    "gzip": "find public -name '*.css' -o -name '*.eot' -o -name '*.html' -o -name '*.js' -o -name '*.json' -o -name 'html' -o -name '*.js' -o -name '*.json' -o -name '*.svg' -o -name '*.ttf' -o -name '*.webapp' -o -name '*.woff' | xargs gzip --k -9 -f",
     "postinstall": "npm run gzip"
   },
   "main": "./index",
