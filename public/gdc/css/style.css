@@ -384,9 +384,9 @@ ul {
 }
 
 .flex--variable > li {
-  /*-webkit-flex-basis: 50%;*/
+  -webkit-flex-basis: 50%;
   display: flex;
-  flex: 0 1 50%;
+  flex-basis: 50%;
   margin-top: 15px;
   padding: 0 7.5px;
 }
