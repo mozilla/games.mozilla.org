@@ -8,7 +8,10 @@ var internals = {
   node_env: process.env.NODE_ENVIRONMENT || 'development',
   host: process.env.MOZ_GAMES_HOST || process.env.HOST || '0.0.0.0',
   port: process.env.MOZ_GAMES_PORT || process.env.PORT || 3000,
-  fileServer: new nodeStatic.Server('./public')
+  fileServer: new nodeStatic.Server('./public'),
+  cacheExpiryDates: {
+    fonts: 31536000  // 1 year
+  }
 };
 
 var server = http.createServer(function (req, res) {
@@ -44,6 +47,14 @@ var server = http.createServer(function (req, res) {
 
     return internals.fileServer.serveFile('/401.html', 401,
       {'WWW-Authenticate': 'Basic realm="mozgames"'}, req, res);
+  }
+
+  var urlBase = req.url.split('?')[0] || '';
+  var urlExtension = urlBase.substr(urlBase.lastIndexOf('.'));
+  if (['.woff', '.ttf', '.eot'].indexOf(urlExtension) !== -1) {
+    var now = new Date();
+    now.setSeconds(now.getSeconds() + internals.cacheExpiryDates.fonts);
+    res.setHeader('Expires', now.toUTCString());
   }
 
   req.addListener('end', function () {
