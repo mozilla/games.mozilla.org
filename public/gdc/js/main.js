@@ -13,21 +13,6 @@
 
   loadSW();
 
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-49796218-16', 'auto');
-  ga('send', 'pageview');
-
-  $$('.demo__item').forEach(function (el) {
-    el.addEventListener('click', function () {
-      // NOTE: Not using dataset for IE compatibility.
-      ga('send', 'event', 'demo.click', el.getAttribute('data-demo'));
-    });
-  });
-
   function loadSW() {
     if ('serviceWorker' in navigator) {
       // Service Workers require HTTPS (http://goo.gl/lq4gCo). `localhost`
@@ -65,6 +50,52 @@
     } else {
       console.warn('Service Workers are not supported in your browser');
     }
-
   }
+
+  // Google Analytics.
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49796218-16', 'auto');
+  ga('send', 'pageview');
+
+  $('.gdc__mozilla').addEventListener('click', function () {
+    ga('send', 'event', 'click.header', 'mozilla-logo');
+  });
+
+  $('.gdc__logo__link').addEventListener('click', function () {
+    ga('send', 'event', 'click.header', 'gdc-link');
+  });
+
+  $('.gdc__location').addEventListener('click', function () {
+    ga('send', 'event', 'click.header', 'booth-link');
+  });
+
+  $$('.partner__item').forEach(function (el) {
+    el.addEventListener('click', function () {
+      // NOTE: Not using dataset for IE compatibility.
+      ga('send', 'event', 'click.partner', el.getAttribute('data-partner'));
+    });
+  });
+
+  $$('.demo__item').forEach(function (el) {
+    el.addEventListener('click', function () {
+      ga('send', 'event', 'click.demo',
+         el.querySelector('.demo__item__title').textContent);
+    });
+  });
+
+  $$('#posts a').forEach(function (el) {
+    el.addEventListener('click', function () {
+      ga('send', 'event', 'click.post', el.textContent);
+    });
+  });
+
+  $$('#mozilla a').forEach(function (el) {
+    el.addEventListener('click', function () {
+      ga('send', 'event', 'click.footer', el.textContent);
+    });
+  });
 })();
