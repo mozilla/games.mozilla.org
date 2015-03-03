@@ -2,7 +2,7 @@ importScripts('js/serviceworker-cache-polyfill.js');
 
 
 var CACHE_NAME = 'moz-gdc';
-var CACHE_VERSION = 5;
+var CACHE_VERSION = 6;
 var CACHE_KEY = CACHE_NAME + '-v' + CACHE_VERSION;
 
 
