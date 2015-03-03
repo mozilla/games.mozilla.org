@@ -30,11 +30,6 @@ var server = http.createServer(function (req, res) {
     res.setHeader('Expires', now.toUTCString());
   }
 
-  if (req.url.split('?')[0] === '/') {
-    res.writeHead(302, {'Location': '/gdc' + req.url});
-    return res.end();
-  }
-
   req.addListener('end', function () {
     internals.fileServer.serve(req, res, function (err) {
       if (!err) {
