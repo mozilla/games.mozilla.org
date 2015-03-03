@@ -323,7 +323,7 @@ ul {
   background-color: rgb(255,63,0);
   background-image: url(../img/logos/gdc15.svg),
                     linear-gradient(90deg, #f90 10%, rgb(255,63,0) 90%);
-  background-position: 50% 27%;
+  background-position: 50% calc(50% - 38px), 0 0;
   background-size: 50% auto, auto;
 }
 
@@ -347,14 +347,14 @@ ul {
   background: #00549e no-repeat;
   background-image: url(../img/highlights/dev-edition/logo.png),
                     radial-gradient(ellipse farthest-side at top left, #00549e 0, rgba(0,0,0,.85) 100%);
-  background-position: 50% 27%, 0 50%;
+  background-position: 50% calc(50% - 38px), 0 50%;
   background-size: 220px auto, 100% 500px;
 }
 
 .highlight__item--marketplace a:before {
   background-image: url(../img/highlights/marketplace/logo.svg),
                     url(../img/highlights/miss-take/9.jpg);
-  background-position: 50% 37%, 0 0;
+  background-position: 50% calc(50% - 38px), 0 0;
   background-size: auto 30px, cover;
 }
 
@@ -540,6 +540,18 @@ ul {
 
   .lacks-touch .highlight__item a:hover .highlight__item__title {
     line-height: 1.1;
+  }
+
+  .highlight__item--gdc a:before {
+    background-position: 50% calc(50% - 41px), 0 0;
+  }
+
+  .highlight__item--dev-edition a:before {
+    background-position: 50% calc(50% - 41px), 0 50%;
+  }
+
+  .highlight__item--marketplace a:before {
+    background-position: 50% calc(50% - 30px), 0 0;
   }
 
   .footer__list {
