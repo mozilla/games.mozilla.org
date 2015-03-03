@@ -397,6 +397,7 @@ ul {
   -webkit-align-items: center;
   display: -webkit-flex;
   display: -ms-flexbox;
+  -webkit-flex-wrap: wrap;
 
   /* new flexbox */
   align-items: center;
