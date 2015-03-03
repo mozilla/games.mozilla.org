@@ -222,10 +222,6 @@ ul {
   display: block;
 }
 
-.company__list {
-  flex-wrap: wrap;
-}
-
 .company__item img {
   max-height: 60px;
   max-width: 150px;
@@ -265,9 +261,15 @@ ul {
   max-height: 100%;
   text-align: center;
 
-  /* TODO: make this flexbox work with old flexbox syntax. */
-  display: flex;
+  /* old flexbox */
+  -ms-flex-align: center;
+  -webkit-justify-content: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+
+  /* new flexbox */
   justify-content: center;
+  display: flex;
   flex-direction: column;
 }
 
@@ -396,12 +398,11 @@ ul {
   -webkit-align-items: center;
   display: -webkit-flex;
   display: -ms-flexbox;
-  -webkit-justify-content: space-between;
 
   /* new flexbox */
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .flex--variable {
@@ -434,14 +435,59 @@ ul {
   background-position: 50% 70%;
 }
 
+@media (max-width: 1079px) and (min-width: 436px) {
+  .flex--spread {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1079px) {
+  .company__item img {
+    max-height: 50px;
+    max-width: 125px;
+  }
+}
+
+@media (max-width: 371px) {
+  .flex--spread {
+    display: block;
+    text-align: center;
+  }
+
+  .company__item {
+    display: inline-block;
+  }
+
+  .company__item + .company__item {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 999px) {
+  .company__item img {
+    max-height: 40px;
+    max-width: 100px;
+  }
+}
+
 @media (max-width: 799px) {
-  .company__list {
-    margin-top: 15px;
+  .col--50 + .col--50 {
+    padding-top: 30px;
+  }
+
+  .flex--spread > li {
+    margin-top: 10px;
   }
 
   .flex--variable > li {
     -webkit-flex-basis: 100%;
     flex-basis: 100%;
+  }
+
+  .company__item img {
+    max-height: 35px;
+    max-width: 88px;
   }
 }
 
@@ -467,9 +513,14 @@ ul {
   }
 }
 
-@media (max-width: 799px) {
-  .col--50 + .col--50 {
-    padding-top: 30px;
+@media (min-width: 1080px) {
+  .company__list {
+    min-height: 60px;
+  }
+
+  .flex--spread {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
   }
 }
 
@@ -500,9 +551,5 @@ ul {
 
   .col + .col {
     padding-left: 10px;
-  }
-
-  .company__list {
-    min-height: 60px;
   }
 }
