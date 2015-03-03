@@ -508,6 +508,10 @@ ul {
     font-size: 18px;
   }
 
+  .highlight__item a:hover .highlight__item__title {
+    line-height: 1.1;
+  }
+
   .footer__list {
     font-size: 12px;
   }
