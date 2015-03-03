@@ -545,6 +545,10 @@ ul {
   .footer__list {
     font-size: 12px;
   }
+
+  .footer__list li:last-child:before {
+    content: "";
+  }
 }
 
 @media (min-width: 1080px) {
