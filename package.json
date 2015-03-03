@@ -15,7 +15,7 @@
     "minify": "npm run minify-js && npm run minify-css",
     "minify-css": "crass public/gdc/css/style.css > public/gdc/css/style.min.css && rm public/gdc/css/style.css && mv public/gdc/css/style.min.css public/gdc/css/style.css",
     "minify-js": "uglifyjs public/gdc/js/main.js > public/gdc/js/main.min.js && rm public/gdc/js/main.js && mv public/gdc/js/main.min.js public/gdc/js/main.js",
-    "postinstall": "npm run minify && npm run gzip"
+    "postinstall": "npm run minify"
   },
   "main": "./index",
   "version": "0.0.2",
