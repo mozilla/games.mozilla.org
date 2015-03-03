@@ -15,7 +15,7 @@ var internals = {
 
 
 if (internals.node_env === 'production') {
-  internals.nodeStaticOptions = {gzip: true, cache: true};
+  internals.nodeStaticOptions = {gzip: true, cache: false};
 }
 
 internals.fileServer = new nodeStatic.Server('./public', internals.nodeStaticOptions);
