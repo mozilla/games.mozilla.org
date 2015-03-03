@@ -518,6 +518,10 @@ ul {
 }
 
 @media (max-width: 499px) {
+  .group--header {
+    background-position: 50% 0;
+  }
+
   .gdc__link {
     font-size: 18px;
   }
