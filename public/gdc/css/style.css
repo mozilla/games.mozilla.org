@@ -459,7 +459,7 @@ ul {
   }
 
   .highlight__item .highlight__item__title {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .footer__list {
@@ -470,6 +470,22 @@ ul {
 @media (max-width: 799px) {
   .col--50 + .col--50 {
     padding-top: 30px;
+  }
+}
+
+@media (min-width: 799px) and (max-width: 999px) {
+  .highlight__item .highlight__item__title {
+    font-size: 18px;
+  }
+
+  .highlight__item__tagline {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 899px) and (max-width: 999px) {
+  .highlight__item .highlight__item__title {
+    font-size: 22px;
   }
 }
 
