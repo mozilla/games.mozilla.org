@@ -54,6 +54,11 @@
   }
 
 
+  // Adding a class so we can disable certain :hover styles on touch.
+  // NOTE: Not using classList for IE compatibility.
+  document.body.className += 'ontouchstart' in window ? ' has-touch' : ' lacks-touch';
+
+
   // Google Analytics.
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

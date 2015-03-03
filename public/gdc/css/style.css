@@ -254,7 +254,7 @@ ul {
   width: 100px;
 }
 
-.highlight__item a:hover .highlight__item__details {
+.lacks-touch .highlight__item a:hover .highlight__item__details {
   background-color: rgba(0,0,0,.8);
   height: 100%;
   max-height: 100%;
@@ -272,19 +272,19 @@ ul {
   flex-direction: column;
 }
 
-.highlight__item a:hover .highlight__item__title {
+.lacks-touch .highlight__item a:hover .highlight__item__title {
   font-size: 36px;
   line-height: 1.2;
   margin-bottom: 5px;
 }
 
-.highlight__item a:hover .highlight__item__tagline {
+.lacks-touch .highlight__item a:hover .highlight__item__tagline {
   font-size: 16px;
   letter-spacing: 0;
   margin-bottom: 5px;
 }
 
-.highlight__item a:hover .highlight__item__view {
+.lacks-touch .highlight__item a:hover .highlight__item__view {
   display: inline-block;
   opacity: 1;
 }
@@ -538,7 +538,7 @@ ul {
     font-size: 18px;
   }
 
-  .highlight__item a:hover .highlight__item__title {
+  .lacks-touch .highlight__item a:hover .highlight__item__title {
     line-height: 1.1;
   }
 
