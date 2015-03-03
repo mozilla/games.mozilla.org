@@ -167,10 +167,9 @@ a.gdc__location {
 
 .site-subtitle {
   display: inline-block;
-  vertical-align: top;
+  margin: -1px 0 0 20px;
   text-align: left;
-  margin-left: 20px;
-  margin-top: -1px;
+  vertical-align: top;
 }
 
 .wrap {
@@ -472,6 +471,33 @@ ul {
 }
 
 @media (max-width: 799px) {
+  .site-heading,
+  .site-subtitle {
+    display: block;
+  }
+
+  .site-heading {
+    margin: 0 auto 10px;
+  }
+
+  .gdc__location,
+  .site-subtitle {
+    margin: 0;
+  }
+
+  .site-subtitle {
+    line-height: 1;
+    text-align: center;
+  }
+
+  .gdc__link {
+    font-size: 22px;
+  }
+
+  .gdc__location {
+    font-size: 18px;
+  }
+
   .col--50 + .col--50 {
     padding-top: 30px;
   }
@@ -492,12 +518,16 @@ ul {
 }
 
 @media (max-width: 499px) {
-  .wrap {
-    padding: 15px;
+  .gdc__link {
+    font-size: 18px;
   }
 
   .gdc__location {
     font-size: 14px;
+  }
+
+  .wrap {
+    padding: 15px;
   }
 
   .highlight__item__details {
