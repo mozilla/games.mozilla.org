@@ -11,6 +11,7 @@
     return toArray(document.querySelectorAll(selector));
   }
 
+  // ServiceWorker for caching requests offline.
   loadSW();
 
   function loadSW() {
@@ -51,6 +52,7 @@
       console.warn('Service Workers are not supported in your browser');
     }
   }
+
 
   // Google Analytics.
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -102,5 +104,13 @@
     el.addEventListener('click', function () {
       ga('send', 'event', 'click.footer', el.textContent);
     });
+  });
+
+
+  // Open external links in new tabs.
+  Array.prototype.slice.call(
+    document.querySelectorAll('[href^="//"], [href*="://"]')
+  ).forEach(function (link) {
+    link.setAttribute('target', '_blank');
   });
 })();
