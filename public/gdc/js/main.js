@@ -28,7 +28,7 @@
         location.protocol = 'https:';
       }
 
-      if (localStorage.disable_sw) {
+      if (true && localStorage.disable_sw) {
         console.log('Service Workers are temporarily disabled');
         navigator.serviceWorker.getRegistration('./sw.js').then(function (sw) {
           if (sw) {
