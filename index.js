@@ -1,6 +1,5 @@
 var http = require('http');
 
-var basicAuth = require('basic-auth');
 var nodeStatic = require('node-static');
 
 
