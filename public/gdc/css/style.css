@@ -61,8 +61,8 @@
   padding: 0;
 }
 
-html {
-  background: rgb(0,150,221);
+html, body {
+  background: #fff;
 }
 
 body {
@@ -82,14 +82,13 @@ a {
 
 .copy--bright a:hover {
   border-bottom-color: #eddfff;
-  color: #fff;
 }
 
-.copy--dark a {
+.copy--faint a {
   color: #9df;
 }
 
-.copy--dark a:hover {
+a:hover {
   color: #fff;
 }
 
@@ -181,6 +180,11 @@ ul {
   list-style: none;
 }
 
+.group--footer,
+.highlight__item__view {
+  background-color: rgb(0,150,221);
+}
+
 .group--bright {
   background-color: #efefef;
   color: #333;
@@ -233,7 +237,6 @@ ul {
 }
 
 .highlight__item__view {
-  background-color: rgb(0,150,221);
   color: #fff;
   display: none;
   font-weight: 500;
@@ -304,28 +307,56 @@ ul {
   width: 100%;
 }
 
-.highlight__item--teleporter a:before {
-  background-image: url(../img/highlights/teleporter/1.jpg);
+.highlight__item--gdc a:before {
+  background-color: rgb(255,63,0);
+  background-image: url(../img/logos/gdc15.svg),
+                    linear-gradient(90deg, #f90 10%, rgb(255,63,0) 90%);
+  background-position: 50% 27%;
+  background-size: 50% auto, auto;
 }
 
-.highlight__item--prime-world-defenders a:before {
-  background-image: url(../img/highlights/prime-world-defenders/1.png);
+.highlight__item--webgl2 a:before {
+  background-image: url(../img/highlights/webgl2/7.png);
 }
 
-.highlight__item--the-marvellous-miss-take a:before {
-  background-image: url(../img/highlights/miss-take/9.jpg);
+.highlight__item--unity5 a:before {
+  background-image: url(../img/highlights/unity5/1.png);
+}
+
+.highlight__item--unreal a:before {
+  background-image: url(../img/highlights/unreal/shooter-1.png);
+}
+
+.highlight__item--webvr a:before {
+  background-image: url(../img/highlights/webvr/sechelt-2.png);
+}
+
+.highlight__item--dev-edition a:before {
+  background: #00549e no-repeat;
+  background-image: url(../img/highlights/dev-edition/logo.png),
+                    radial-gradient(ellipse farthest-side at top left, #00549e 0, rgba(0,0,0,.85) 100%);
+  background-position: 50% 27%, 0 50%;
+  background-size: 220px auto, 100% 500px;
+}
+
+.highlight__item--marketplace a:before {
+  background-image: url(../img/highlights/marketplace/logo.svg),
+                    url(../img/highlights/miss-take/9.jpg);
+  background-position: 50% 37%, 0 0;
+  background-size: auto 30px, cover;
+}
+
+.highlight__item--mdn a:before {
+  background-color: #00539f;
+  background-image: url(../img/highlights/mdn/mdn-logo.svg),
+                    url(../img/highlights/mdn/game.png),
+                    linear-gradient(45deg, #1a2980 10%, #26D0Ce 90%);
+  background-position: 50% 10%, 50% 72px;
+  background-size: 46.5% auto, 50% auto, auto;
 }
 
 .highlight__item--tanx a:before {
   background-image: url(../img/highlights/tanx/1.png);
-}
-
-.highlight__item--future-web-technologies a:before {
-  background-image: url(../img/highlights/future-web-technologies/sechelt-2.png);
-}
-
-.highlight__item--dev-tools a:before {
-  background-image: url(../img/highlights/oculus-rex/1.jpg);
 }
 
 .highlight__item img {
@@ -334,14 +365,6 @@ ul {
 
 .copy--links li + li {
   margin-top: 10px;
-}
-
-.footer__list--legal {
-  float: left;
-}
-
-.footer__list--social {
-  float: right;
 }
 
 .footer__list li {
@@ -389,6 +412,15 @@ ul {
   flex-basis: 50%;
   margin-top: 15px;
   padding: 0 7.5px;
+}
+
+.flex--variable > li.highlight__item--tanx {
+  -webkit-flex-basis: 100%;
+  flex-basis: 100%;
+}
+
+.flex--variable > li.highlight__item--tanx a:before {
+  background-position: 50% 70%;
 }
 
 @media (max-width: 799px) {
