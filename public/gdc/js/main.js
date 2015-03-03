@@ -66,7 +66,11 @@
   });
 
   $('.gdc__logo__link').addEventListener('click', function () {
-    ga('send', 'event', 'click.header', 'gdc-link');
+    ga('send', 'event', 'click.header', 'gdc-logo-link');
+  });
+
+  $('.gdc__text__link').addEventListener('click', function () {
+    ga('send', 'event', 'click.header', 'gdc-text-link');
   });
 
   $('.gdc__location').addEventListener('click', function () {

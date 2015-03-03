@@ -85,10 +85,11 @@ a {
 }
 
 .copy--faint a {
-  color: #9df;
+  color: #cef;
 }
 
-a:hover {
+a:hover,
+a.gdc__location:hover {
   color: #fff;
 }
 
@@ -104,19 +105,8 @@ a:hover {
 }
 
 .group--header {
-  background: rgb(0,150,221) url(../img/header.jpg) 80% 0 repeat-x;
-  position: relative;
+  background: rgba(0,150,221,.5) url(../img/header.jpg) 80% 0 repeat-x;
   text-align: center;
-}
-
-.group--header:after {
-  background: rgba(0,150,221,.5);
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }
 
 .group--header .wrap {
@@ -147,19 +137,40 @@ a:hover {
   background: url(../img/logos/gdc15.svg) center no-repeat;
   background-size: auto 100%;
   height: 30px;
-  margin-bottom: 10px;
 }
 
 .gdc__link {
   display: block;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 300;
   line-height: 1.4;
 }
 
+.gdc__text__link {
+  font-weight: 400;
+}
+
+a.gdc__location {
+  color: #9df;
+}
+
 .gdc__location {
   display: block;
-  font-size: 18px;
+  font-size: 22px;
+  margin-top: 8px;
+}
+
+.site-heading {
+  display: inline-block;
+  width: 85px;
+}
+
+.site-subtitle {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: -1px;
 }
 
 .wrap {
