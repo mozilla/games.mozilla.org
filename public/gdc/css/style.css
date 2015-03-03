@@ -362,7 +362,7 @@ ul {
   background-color: #00539f;
   background-image: url(../img/highlights/mdn/mdn-logo.svg),
                     url(../img/highlights/mdn/game.png),
-                    linear-gradient(45deg, #1a2980 10%, #26D0Ce 90%);
+                    linear-gradient(45deg, #1a2980 10%, #26d0ce 90%);
   background-position: 50% 10%, 50% 72px;
   background-size: 46.5% auto, 50% auto, auto;
 }
