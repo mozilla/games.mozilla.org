@@ -22,13 +22,13 @@ internals.fileServer = new nodeStatic.Server('./public', internals.nodeStaticOpt
 
 
 var server = http.createServer(function (req, res) {
-  var urlBase = req.url.split('?')[0] || '';
-  var urlExtension = urlBase.substr(urlBase.lastIndexOf('.'));
-  if (['.woff', '.ttf', '.eot'].indexOf(urlExtension) !== -1) {
-    var now = new Date();
-    now.setSeconds(now.getSeconds() + internals.cacheExpiryDates.fonts);
-    res.setHeader('Expires', now.toUTCString());
-  }
+  // var urlBase = req.url.split('?')[0] || '';
+  // var urlExtension = urlBase.substr(urlBase.lastIndexOf('.'));
+  // if (['.woff', '.ttf', '.eot'].indexOf(urlExtension) !== -1) {
+  //   var now = new Date();
+  //   now.setSeconds(now.getSeconds() + internals.cacheExpiryDates.fonts);
+  //   res.setHeader('Expires', now.toUTCString());
+  // }
 
   req.addListener('end', function () {
     internals.fileServer.serve(req, res, function (err) {
