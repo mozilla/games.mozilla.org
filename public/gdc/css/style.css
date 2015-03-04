@@ -115,20 +115,20 @@ a.gdc__location:hover {
 }
 
 .mozilla-logo {
-  background: url(../img/mozilla.svg) 0 -4px no-repeat;
-  background-size: auto 100%;
+  background: url(../img/mozilla.svg) no-repeat;
+  background-size: contain;
   height: 32px;
 }
 
 .gdc__mozilla {
-  background-position: center;
+  background-position: 1px 50%;
+  background-size: auto 22px;
   height: 32px;
   margin-bottom: 5px;
-  min-width: auto;
-  width: auto;
 }
 
 .footer__mozilla {
+  background-size: auto 25px;
   display: block;
   width: 100%;
 }
@@ -557,6 +557,11 @@ ul {
 
   .highlight__item--marketplace a:before {
     background-position: 50% calc(50% - 30px), 0 0;
+  }
+
+  .footer__mozilla {
+    background-size: auto 20px;
+    height: 25px;
   }
 
   .footer__list {
