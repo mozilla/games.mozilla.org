@@ -13,14 +13,14 @@
     "prod": "NODE_ENVIRONMENT=production node index.js",
     "gzip": "find public -name '*.css' -o -name '*.eot' -o -name '*.html' -o -name '*.js' -o -name '*.json' -o -name 'html' -o -name '*.js' -o -name '*.json' -o -name '*.svg' -o -name '*.ttf' -o -name '*.webapp' -o -name '*.woff' | xargs gzip --k -9 -f",
     "minify": "npm run minify-js && npm run minify-css",
-    "minify-css": "cleancss public/gdc/css/style.css > public/gdc/css/style.min.css && rm public/gdc/css/style.css && mv public/gdc/css/style.min.css public/gdc/css/style.css",
+    "minify-css": "crass public/gdc/css/style.css > public/gdc/css/style.min.css && rm public/gdc/css/style.css && mv public/gdc/css/style.min.css public/gdc/css/style.css",
     "minify-js": "uglifyjs public/gdc/js/main.js > public/gdc/js/main.min.js && rm public/gdc/js/main.js && mv public/gdc/js/main.min.js public/gdc/js/main.js",
     "postinstall": "npm run minify"
   },
   "main": "./index",
   "version": "0.0.2",
   "dependencies": {
-    "clean-css": "^3.1.3",
+    "crass": "^0.7.4",
     "node-static": "^0.7.6",
     "uglify-js": "^2.4.16"
   },
