@@ -265,6 +265,7 @@ ul {
   -webkit-justify-content: center;
   display: -webkit-flex;
   display: -ms-flexbox;
+  -webkit-flex-direction: column;
 
   /* new flexbox */
   justify-content: center;
