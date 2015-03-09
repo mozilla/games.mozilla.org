@@ -2,8 +2,8 @@
 
 Local Path | Local URL  | External URL | Description
 ---------- | ---------- | ------------ | -----------
-[`./public/index.html`](https://github.com/mozilla/moz-gdc/blob/master/public/index.html) | http://localhost:3000/ | https://games.mozilla.org/ | Redirects to `/gdc/` for now
-[`./public/index.html`](https://github.com/mozilla/moz-gdc/blob/master/public/gdc/) | http://localhost:3000/gdc/ | https://games.mozilla.org/gdc/ | Conference mini site for Mozilla's presence at [GDC 2015](http://www.gdconf.com/)
+[`./public/index.html`](https://github.com/mozilla/moz-gdc/blob/master/public/index.html) | [http://localhost:3000/](http://localhost:3000/) | https://games.mozilla.org/ | Redirects to `/gdc/` for now
+[`./public/index.html`](https://github.com/mozilla/moz-gdc/blob/master/public/gdc/) | [http://localhost:3000/gdc/](http://localhost:3000/gdc/) | https://games.mozilla.org/gdc/ | Conference mini site for Mozilla's presence at [GDC 2015](http://www.gdconf.com/)
 
 
 ## Installation
@@ -20,6 +20,14 @@ All of the web content is static (see the [https://github.com/mozilla/moz-gdc/tr
 To serve the site from the simple server:
 
     npm run dev
+
+Then launch the site from your favourite browser:
+
+[__http://localhost:3000/__](http://localhost:3000/)
+
+If you wish to serve the site from a different port:
+
+    MOZ_GDC_PORT=8000 npm run dev
 
 ### Advanced
 
