@@ -112,8 +112,20 @@
   });
 
 
+  // Outsmart spam bots.
+  var pressEmail = $('.footer__press');
+
+  function setPressEmail() {
+    pressEmail.href = 'mailto:press';
+    pressEmail.href += '@mozilla.com';
+  }
+
+  pressEmail.addEventListener('click', setPressEmail);
+  $('#mozilla').addEventListener('mouseover', setPressEmail);
+
+
   // Open external links in new tabs.
-  Array.prototype.slice.call(
+  toArray(
     document.querySelectorAll('[href^="//"], [href*="://"]')
   ).forEach(function (link) {
     link.setAttribute('target', '_blank');
