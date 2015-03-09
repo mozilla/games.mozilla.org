@@ -2,15 +2,15 @@
 
 Local Path | Local URL  | External URL | Description
 ---------- | ---------- | ------------ | -----------
-[`./public/index.html`](https://github.com/mozilla/moz-gdc/blob/master/public/index.html) | http://localhost:3000/ | http://games.mozilla.org/ | TBD (currently a placeholder for Mozilla Games portal)
-[`./public/index.html`](https://github.com/mozilla/moz-gdc/blob/master/public/gdc/) | http://localhost:3000/gdc/ | http://games.mozilla.org/gdc/ | Conference mini site for Mozilla's presence at [GDC 2015](http://www.gdconf.com/)
+[`./public/index.html`](https://github.com/mozilla/moz-gdc/blob/master/public/index.html) | http://localhost:3000/ | https://games.mozilla.org/ | Redirects to `/gdc/` for now
+[`./public/index.html`](https://github.com/mozilla/moz-gdc/blob/master/public/gdc/) | http://localhost:3000/gdc/ | https://games.mozilla.org/gdc/ | Conference mini site for Mozilla's presence at [GDC 2015](http://www.gdconf.com/)
 
 
 ## Installation
 
-1. To install the Node dependencies:
+To install the Node dependencies:
 
-        npm install
+    npm install
 
 
 ## Development
@@ -47,7 +47,3 @@ Alternatively:
 To run the server à la Heroku:
 
     foreman start web
-
-To set Basic Auth for the `/gdc/` directory, for example:
-
-    heroku config:set AUTH_GDC=mozilla:mozilla
