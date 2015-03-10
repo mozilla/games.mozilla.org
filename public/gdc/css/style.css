@@ -248,10 +248,10 @@ ul {
   font-weight: 500;
   letter-spacing: .25px;
   margin: 10px auto 0;
+  min-width: 100px;
   opacity: 0;
   padding: 5px 20px;
   text-transform: uppercase;
-  width: 100px;
 }
 
 .lacks-touch .highlight__item a:hover .highlight__item__details {

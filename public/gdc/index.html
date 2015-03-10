@@ -10,6 +10,8 @@
     <link rel="icon" type="image/png" sizes="196x196" href="https://mozorg.cdn.mozilla.net/media/img/favicon/favicon-196x196.png">
     <link rel="shortcut icon" href="https://mozorg.cdn.mozilla.net/media/img/favicon.ico">
     <link rel="manifest" href="manifest.json">
+    <script src="js/l10n.js"></script>
+    <link rel="prefetch" type="application/l10n" href="l10n/locales.ini">
     <!--[if lt IE 9]>
     <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -20,16 +22,16 @@
         <h1 class="site-heading">
           <a href="https://www.mozilla.org/" class="gdc__mozilla mozilla-logo hidden-text" title="Mozilla">Mozilla</a>
           <a href="http://www.gdconf.com/" class="gdc__link gdc__logo__link">
-            <div class="gdc__logo hidden-text" title="GDC 2015">
+            <div data-l10n-id="gdc__logo" class="gdc__logo hidden-text" title="GDC 2015">
               GDC 2015
             </div>
           </a>
         </h1>
         <p class="site-subtitle">
-          <a href="http://www.gdconf.com/" class="gdc__link gdc__text__link">
+          <a data-l10n-id="gdc__text" href="http://www.gdconf.com/" class="gdc__link gdc__text__link">
             Game Developers Conference 2015
           </a>
-          <a href="http://www.gdconf.com/pdf/floorplans/2015/GDC_2015%20_SouthHall_ExpoOnly_1_23_2015.pdf" class="gdc__link gdc__location">
+          <a data-l10n-id="gdc__location" href="http://www.gdconf.com/pdf/floorplans/2015/GDC_2015%20_SouthHall_ExpoOnly_1_23_2015.pdf" class="gdc__link gdc__location">
             South Hall Booth #2110
           </a>
         </p>
@@ -38,7 +40,7 @@
 
     <section id="companies" class="group group--companies group--bright">
       <div class="wrap c">
-        <h2>Top Game Companies Using Mozilla Web Technologies</h2>
+        <h2 data-l10n-id="companies__heading">Top Game Companies Using Mozilla Web Technologies</h2>
         <ul class="company__list flex--spread">
           <li class="company__item"><a href="http://unity3d.com/"><img src="img/logos/companies/unity.png" alt="Unity" title="Unity"></a></li>
           <li class="company__item"><a href="https://playcanvas.com/"><img src="img/logos/companies/playcanvas.png" alt="PlayCanvas" title="PlayCanvas"></a></li>
@@ -53,15 +55,15 @@
 
     <section id="Highlights" class="group group--highlights">
       <div class="wrap c">
-        <h2>Highlights</h2>
+        <h2 data-l10n-id="highlights__heading">Highlights</h2>
         <ul class="highlights__list flex--variable">
           <li id="highlights-gdc" class="highlight__item highlight__item--gdc">
             <a href="https://blog.mozilla.org/press/2015/03/bringing-native-games-to-the-web-is-about-to-get-a-whole-lot-easier">
               <img src="img/logos/gdc15.svg" width="400" style="background-color: #ff3f00">
               <div class="highlight__item__details">
-                <h3 class="highlight__item__title">GDC Summary</h3>
-                <p class="highlight__item__tagline">What’s happened in high-end Web gaming since last year</p>
-                <span class="highlight__item__view">View &rsaquo;</span>
+                <h3 data-l10n-id="highlight__item__title--gdc" class="highlight__item__title">GDC Summary</h3>
+                <p data-l10n-id="highlight__item__tagline--gdc" class="highlight__item__tagline">What’s happened in high-end Web gaming since last year</p>
+                <span data-l10n-id="button__view" class="highlight__item__view">View ›</span>
               </div>
             </a>
           </li>
@@ -70,9 +72,9 @@
             <a href="https://blog.mozilla.org/futurereleases/2015/03/03/an-early-look-at-webgl-2">
               <img src="img/highlights/webgl2/7.png" width="400">
               <div class="highlight__item__details">
-                <h3 class="highlight__item__title">WebGL 2</h3>
-                <p class="highlight__item__tagline">Check out the future of 3D graphics on the Web</p>
-                <span class="highlight__item__view">View &rsaquo;</span>
+                <h3 data-l10n-id="highlight__item__title--webgl2" class="highlight__item__title">WebGL 2</h3>
+                <p data-l10n-id="highlight__item__tagline--webgl2" class="highlight__item__tagline">Check out the future of 3D graphics on the Web</p>
+                <span data-l10n-id="button__view" class="highlight__item__view">View ›</span>
               </div>
             </a>
           </li>
@@ -81,9 +83,9 @@
             <a href="http://blog.mozilla.org/press/2015/03/unity-5-ships-and-brings-one-click-webgl-export-to-legions-of-game-developers">
               <img src="img/highlights/unity5/1.png" width="400">
               <div class="highlight__item__details">
-                <h3 class="highlight__item__title">Unity 5 Shipping With WebGL</h3>
-                <p class="highlight__item__tagline">Unity 5 shipping with preview WebGL exporter today</p>
-                <span class="highlight__item__view">View &rsaquo;</span>
+                <h3 data-l10n-id="highlight__item__title--unity5" class="highlight__item__title">Unity 5 Shipping With WebGL</h3>
+                <p data-l10n-id="highlight__item__tagline--unity5" class="highlight__item__tagline">Unity 5 shipping with preview WebGL exporter today</p>
+                <span data-l10n-id="button__view" class="highlight__item__view">View ›</span>
               </div>
             </a>
           </li>
@@ -92,9 +94,9 @@
             <a href="https://blog.mozilla.org/blog/2015/02/24/unreal-engine-4-7-binary-release-includes-html5-export-3/">
               <img src="img/highlights/unreal/shooter-1.png" width="400">
               <div class="highlight__item__details">
-                <h3 class="highlight__item__title">Unreal Engine 4 Shipping With HTML5</h3>
-                <p class="highlight__item__tagline">Unreal Engine 4.7 shipping with native HTML5 export today</p>
-                <span class="highlight__item__view">View &rsaquo;</span>
+                <h3 data-l10n-id="highlight__item__title--unreal" class="highlight__item__title">Unreal Engine 4 Shipping With HTML5</h3>
+                <p data-l10n-id="highlight__item__tagline--unreal" class="highlight__item__tagline">Unreal Engine 4.7 shipping with native HTML5 export today</p>
+                <span data-l10n-id="button__view" class="highlight__item__view">View ›</span>
               </div>
             </a>
           </li>
@@ -103,9 +105,9 @@
             <a href="http://mozvr.com/">
               <img src="img/highlights/webvr/sechelt-2.png" width="400">
               <div class="highlight__item__details">
-                <h3 class="highlight__item__title">WebVR</h3>
-                <p class="highlight__item__tagline">Bringing next-generation VR to the Web</p>
-                <span class="highlight__item__view">View &rsaquo;</span>
+                <h3 data-l10n-id="highlight__item__title--webvr" class="highlight__item__title">WebVR</h3>
+                <p data-l10n-id="highlight__item__tagline--webvr" class="highlight__item__tagline">Bringing next-generation VR to the Web</p>
+                <span data-l10n-id="button__view" class="highlight__item__view">View ›</span>
               </div>
             </a>
           </li>
@@ -114,9 +116,9 @@
             <a href="https://www.mozilla.org/en-US/firefox/developer/all/">
               <img src="img/highlights/dev-edition/logo.png" width="400" style="background-color: #00549e">
               <div class="highlight__item__details">
-                <h3 class="highlight__item__title">Firefox Developer Edition</h3>
-                <p class="highlight__item__tagline">Now available in 64-bit with new developer tools</p>
-                <span class="highlight__item__view">View &rsaquo;</span>
+                <h3 data-l10n-id="highlight__item__title--dev-edition" class="highlight__item__title">Firefox Developer Edition</h3>
+                <p data-l10n-id="highlight__item__tagline--dev-edition" class="highlight__item__tagline">Now available in 64-bit with new developer tools</p>
+                <span data-l10n-id="button__view" class="highlight__item__view">View ›</span>
               </div>
             </a>
           </li>
@@ -125,9 +127,9 @@
             <a href="https://marketplace.firefox.com/">
               <img src="img/highlights/marketplace/logo.svg" width="400" style="background-color: #4d4e53">
               <div class="highlight__item__details">
-                <h3 class="highlight__item__title">Firefox Marketplace</h3>
-                <p class="highlight__item__tagline">Distribution opportunities for Web apps</p>
-                <span class="highlight__item__view">View &rsaquo;</span>
+                <h3 data-l10n-id="highlight__item__title--marketplace" class="highlight__item__title">Firefox Marketplace</h3>
+                <p data-l10n-id="highlight__item__tagline--marketplace" class="highlight__item__tagline">Distribution opportunities for Web apps</p>
+                <span data-l10n-id="button__view" class="highlight__item__view">View ›</span>
               </div>
             </a>
           </li>
@@ -136,9 +138,9 @@
             <a href="https://developer.mozilla.org/docs/Games">
               <img src="img/highlights/mdn/mdn-logo.svg" width="400" style="background-color: #00539f">
               <div class="highlight__item__details">
-                <h3 class="highlight__item__title">Games on MDN</h3>
-                <p class="highlight__item__tagline">Learn about building games on the Web at the Mozilla Developer Network</p>
-                <span class="highlight__item__view">View &rsaquo;</span>
+                <h3 data-l10n-id="highlight__item__title--mdn" class="highlight__item__title">Games on MDN</h3>
+                <p data-l10n-id="highlight__item__tagline--mdn" class="highlight__item__tagline">Learn about building games on the Web at the Mozilla Developer Network</p>
+                <span data-l10n-id="button__view" class="highlight__item__view">View ›</span>
               </div>
             </a>
           </li>
@@ -147,9 +149,9 @@
             <a href="http://tanx.playcanvas.com/">
               <img src="img/highlights/tanx/1.png" width="400">
               <div class="highlight__item__details">
-                <h3 class="highlight__item__title">Tanx</h3>
-                <p class="highlight__item__tagline">WebGL games run everywhere</p>
-                <span class="highlight__item__view">Play &rsaquo;</span>
+                <h3 data-l10n-id="highlight__item__title--tanx" class="highlight__item__title">Tanx</h3>
+                <p data-l10n-id="highlight__item__tagline--tanx" class="highlight__item__tagline">WebGL games run everywhere</p>
+                <span data-l10n-id="button__play" class="highlight__item__view">Play ›</span>
               </div>
             </a>
           </li>
@@ -160,23 +162,23 @@
     <section id="posts" class="group group--posts copy copy--bright copy--links">
       <div class="wrap c">
         <div class="col col--50">
-          <h2>Blog Posts</h2>
+          <h2 data-l10n-id="posts__heading">Blog Posts</h2>
           <ul>
-            <li><a href="https://blog.mozilla.org/press/2015/03/bringing-native-games-to-the-web-is-about-to-get-a-whole-lot-easier">GDC Summary</a></li>
-            <li><a href="http://blog.mozilla.org/press/2015/03/unity-5-ships-and-brings-one-click-webgl-export-to-legions-of-game-developers">Unity 5 Shipping With WebGL</a></li>
-            <li><a href="https://hacks.mozilla.org/2015/03/firefox-developer-edition-38-64-bits-and-more/">Firefox Developer Edition 38: 64-bits and more</a></li>
-            <li><a href="https://blog.mozilla.org/blog/2015/02/24/unreal-engine-4-7-binary-release-includes-html5-export-3/">Unreal Engine 4.7 Binary Release Includes HTML5 Export</a></li>
-            <li><a href="https://blog.mozilla.org/luke/2015/02/18/microsoft-announces-asm-js-optimizations/">Microsoft announces asm.js optimizations</a></li>
+            <li><a data-l10n-id="posts__gdc" href="https://blog.mozilla.org/press/2015/03/bringing-native-games-to-the-web-is-about-to-get-a-whole-lot-easier">GDC Summary</a></li>
+            <li><a data-l10n-id="posts__unity5" href="http://blog.mozilla.org/press/2015/03/unity-5-ships-and-brings-one-click-webgl-export-to-legions-of-game-developers">Unity 5 Shipping With WebGL</a></li>
+            <li><a data-l10n-id="posts__dev-edition" href="https://hacks.mozilla.org/2015/03/firefox-developer-edition-38-64-bits-and-more/">Firefox Developer Edition 38: 64-bits and more</a></li>
+            <li><a data-l10n-id="posts__unreal4" href="https://blog.mozilla.org/blog/2015/02/24/unreal-engine-4-7-binary-release-includes-html5-export-3/">Unreal Engine 4.7 Binary Release Includes HTML5 Export</a></li>
+            <li><a data-l10n-id="posts__asm" href="https://blog.mozilla.org/luke/2015/02/18/microsoft-announces-asm-js-optimizations/">Microsoft announces asm.js optimizations</a></li>
           </ul>
         </div>
         <div class="col col--50">
-          <h2>Further Reading</h2>
+          <h2 data-l10n-id="further-reading__heading">Further Reading</h2>
           <ul>
-            <li><a href="https://hacks.mozilla.org/2014/10/introducing-simd-js/">Introducing SIMD.js</a></li>
-            <li><a href="https://blog.mozilla.org/javascript/2015/02/26/the-path-to-parallel-javascript/">The Path to Parallel JavaScript</a></li>
-            <li><a href="https://hacks.mozilla.org/2015/03/asm-speedups-everywhere/ ">asm.js Speedups Everywhere</a></li>
-            <li><a href="https://blog.mozilla.org/futurereleases/2015/03/03/an-early-look-at-webgl-2">An early look at WebGL 2</a></li>
-            <li><a href="https://hacks.mozilla.org/2015/02/synchronous-execution-and-filesystem-access-in-emscripten/">Synchronous Execution and Filesystem Access in Emscripten</a></li>
+            <li><a data-l10n-id="further-reading__simd" href="https://hacks.mozilla.org/2014/10/introducing-simd-js/">Introducing SIMD.js</a></li>
+            <li><a data-l10n-id="further-reading__parallel" href="https://blog.mozilla.org/javascript/2015/02/26/the-path-to-parallel-javascript/">The Path to Parallel JavaScript</a></li>
+            <li><a data-l10n-id="further-reading__asm" href="https://hacks.mozilla.org/2015/03/asm-speedups-everywhere/">asm.js Speedups Everywhere</a></li>
+            <li><a data-l10n-id="further-reading__webgl2" href="https://blog.mozilla.org/futurereleases/2015/03/03/an-early-look-at-webgl-2">An early look at WebGL 2</a></li>
+            <li><a data-l10n-id="further-reading__synchronous" href="https://hacks.mozilla.org/2015/02/synchronous-execution-and-filesystem-access-in-emscripten/">Synchronous Execution and Filesystem Access in Emscripten</a></li>
           </ul>
         </div>
       </div>
@@ -186,11 +188,11 @@
       <div class="wrap c">
         <h2><a href="https://mozilla.org/" class="mozilla-logo footer__mozilla hidden-text">Mozilla</a></h2>
         <ul class="footer__list">
-          <li><a href="https://twitter.com/hashtag/FirefoxGames%20GDC15">Twitter</a></li>
-          <li><a href="" class="footer__press">Press</a></li>
-          <li><a href="https://www.mozilla.org/privacy">Privacy Policy</a></li>
-          <li><a href="https://www.mozilla.org/about/legal.html">Legal Notices</a></li>
-          <li><a href="https://www.mozilla.org/legal/fraud-report/index.html">Report Trademark Abuse</a></li>
+          <li><a data-l10n-id="footer__twitter" href="https://twitter.com/hashtag/FirefoxGames%20GDC15">Twitter</a></li>
+          <li><a data-l10n-id="footer__press" href="" class="footer__press">Press</a></li>
+          <li><a data-l10n-id="footer__privacy" href="https://www.mozilla.org/privacy">Privacy Policy</a></li>
+          <li><a data-l10n-id="footer__legal" href="https://www.mozilla.org/about/legal.html">Legal Notices</a></li>
+          <li><a data-l10n-id="footer__trademark" href="https://www.mozilla.org/legal/fraud-report/index.html">Report Trademark Abuse</a></li>
         </ul>
       </div>
     </footer>

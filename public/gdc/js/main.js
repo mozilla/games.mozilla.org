@@ -59,6 +59,12 @@
   document.body.className += 'ontouchstart' in window ? ' has-touch' : ' lacks-touch';
 
 
+  // Set the 'lang' and 'dir' attributes to `<html>` when the page is translated.
+  window.addEventListener('localized', function () {
+    document.documentElement.lang = document.webL10n.getLanguage();
+    document.documentElement.dir = document.webL10n.getDirection();
+  });
+
   // Google Analytics.
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
