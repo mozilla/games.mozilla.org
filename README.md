@@ -3,7 +3,7 @@
 Local Path | Local URL  | External URL | Description
 ---------- | ---------- | ------------ | -----------
 [`./public/index.html`](https://github.com/mozilla/moz-gdc/blob/master/public/index.html) | [http://localhost:3000/](http://localhost:3000/) | https://games.mozilla.org/ | Redirects to `/gdc/` for now
-[`./public/index.html`](https://github.com/mozilla/moz-gdc/blob/master/public/gdc/) | [http://localhost:3000/gdc/](http://localhost:3000/gdc/) | https://games.mozilla.org/gdc/ | Conference mini site for Mozilla's presence at [GDC 2015](http://www.gdconf.com/)
+[`./public/gdc/index.html`](https://github.com/mozilla/moz-gdc/blob/master/public/gdc/) | [http://localhost:3000/gdc/](http://localhost:3000/gdc/) | https://games.mozilla.org/gdc/ | Conference mini site for Mozilla's presence at [GDC 2015](http://www.gdconf.com/)
 
 
 ## Installation
