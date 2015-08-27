@@ -21,6 +21,7 @@
   "version": "1.0.0",
   "dependencies": {
     "crass": "^0.7.4",
+    "http-server": "^0.8.0",
     "uglify-js": "^2.4.16"
   },
   "devDependencies": {
