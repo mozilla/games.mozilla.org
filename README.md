@@ -2,8 +2,8 @@
 
 Local Path | Local URL  | External URL | Description
 ---------- | ---------- | ------------ | -----------
-[`./public/index.html`](https://github.com/mozilla/moz-games/blob/master/public/index.html) | [http://localhost:3000/](http://localhost:3000/) | https://games.mozilla.org/ | Redirects to `/gdc/` for now
-[`./public/gdc/index.html`](https://github.com/mozilla/moz-games/blob/master/public/gdc/) | [http://localhost:3000/gdc/](http://localhost:3000/gdc/) | https://games.mozilla.org/gdc/ | Conference mini site for Mozilla's presence at [GDC 2015](http://www.gdconf.com/)
+[`./public/index.html`](https://github.com/mozilla/moz-games/blob/master/public/index.html) | [http://localhost:8080/](http://localhost:8080/) | https://games.mozilla.org/ | Redirects to `/gdc/` for now
+[`./public/gdc/index.html`](https://github.com/mozilla/moz-games/blob/master/public/gdc/) | [http://localhost:8080/gdc/](http://localhost:8080/gdc/) | https://games.mozilla.org/gdc/ | Conference mini site for Mozilla's presence at [GDC 2015](http://www.gdconf.com/)
 
 
 ## Installation
@@ -23,36 +23,30 @@ To serve the site from the simple server:
 
 Then launch the site from your favourite browser:
 
-[__http://localhost:3000/__](http://localhost:3000/)
+[__http://localhost:8080/__](http://localhost:8080/)
 
 If you wish to serve the site from a different port:
 
-    MOZ_GDC_PORT=8000 npm run dev
+    PORT=8000 npm run dev
 
-### Advanced
+To simulate the production environment but with file watchers to automatically recompile everything:
 
-To run the server on a different port, set the `MOZ_GAMES_HOST` and `MOZ_GAMES_PORT` environment variables.
+    npm run prod:watch
 
-To temporarily disable Service Worker caching (for ease of testing), run this from your browser console:
-
-    localStorage.disable_sw = '1'
-
-To resume Service Worker caching, run this from your browser console:
-
-    delete localStorage.disable_sw
+TODO: Eventually use something simple like [budo](https://github.com/mattdesl/budo) for local development to get easy file watching, live reloading, etc.
 
 
 ## Deployment
 
 In production, the server is run like so:
 
-    NODE_ENVIRONMENT=production node index.js
+    npm start
 
 Alternatively:
 
     npm run prod
 
-To run the server à la Heroku:
+To run the server through Heroku's [foreman](https://devcenter.heroku.com/articles/procfile):
 
     foreman start web
 
