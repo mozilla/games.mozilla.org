@@ -9,7 +9,7 @@
       "density": "4.0"
     }
   ],
-  "start_url": "index.html",
+  "start_url": "/gdc/",
   "display": "standalone",
   "orientation": "portrait",
   "theme-color": "#0096dd"
