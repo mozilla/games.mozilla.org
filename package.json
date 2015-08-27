@@ -12,7 +12,7 @@
     "prod": "npm run prod:build && http-server prod -c60",
     "prod:watch": "npm run prod & onchange public/** -- npm run prod:build",
     "prod:build": "npm run prod:copy && npm run prod:minify",
-    "prod:copy": "rm -rf prod && cp -r public prod && rm prod/gdc/css/style.css prod/gdc/js/{l10n.js,main.js}",
+    "prod:copy": "rm -rf prod && cp -r public prod && rm -f prod/gdc/css/style.css prod/gdc/js/l10n.js prod/gdc/js/main.js",
     "prod:minify": "npm run prod:minify:css && npm run prod:minify:js",
     "prod:minify:css": "crass public/gdc/css/style.css > prod/gdc/css/style.css",
     "prod:minify:js": "uglifyjs public/gdc/js/main.js > prod/gdc/js/main.js && uglifyjs public/gdc/js/l10n.js > prod/gdc/js/l10n.js",
