@@ -1,11 +1,11 @@
 {
-  "name": "moz-gdc",
+  "name": "moz-games",
   "private": true,
-  "description": "Mozilla GDC 2015",
+  "description": "Mozilla Games",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mozilla/moz-gdc.git"
+    "url": "git://github.com/mozilla/moz-games.git"
   },
   "scripts": {
     "start": "NODE_ENVIRONMENT=production node index.js",
