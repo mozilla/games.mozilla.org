@@ -1,32 +1,29 @@
 {
   "name": "moz-games",
-  "private": true,
-  "description": "Mozilla Games",
+  "description": "Mozilla Games site",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/mozilla/moz-games.git"
   },
   "scripts": {
-    "start": "NODE_ENVIRONMENT=production node index.js",
-    "dev": "NODE_ENVIRONMENT=dev nodemon index.js",
-    "prod": "NODE_ENVIRONMENT=production node index.js",
-    "gzip": "find public -name '*.css' -o -name '*.eot' -o -name '*.html' -o -name '*.ini' -o -name '*.js' -o -name '*.json' -o -name 'html' -o -name '*.js' -o -name '*.json' -o -name '*.properties' -o -name '*.svg' -o -name '*.ttf' -o -name '*.webapp' -o -name '*.woff' | xargs gzip --k -9 -f",
-    "minify": "npm run minify-js && npm run minify-css",
-    "minify-css": "crass public/gdc/css/style.css > public/gdc/css/style.min.css && rm public/gdc/css/style.css && mv public/gdc/css/style.min.css public/gdc/css/style.css",
-    "minify-js": "npm run minify-js-main && npm run minify-js-l10n",
-    "minify-js-main": "uglifyjs public/gdc/js/main.js > public/gdc/js/main.min.js && rm public/gdc/js/main.js && mv public/gdc/js/main.min.js public/gdc/js/main.js",
-    "minify-js-l10n": "uglifyjs public/gdc/js/l10n.js > public/gdc/js/l10n.min.js && rm public/gdc/js/l10n.js && mv public/gdc/js/l10n.min.js public/gdc/js/l10n.js",
-    "postinstall": "npm run minify"
+    "start": "npm run prod",
+    "dev": "http-server public -c-1",
+    "prod": "npm run prod:build && http-server prod -c60",
+    "prod:watch": "npm run prod & onchange public/** -- npm run prod:build",
+    "prod:build": "npm run prod:copy && npm run prod:minify",
+    "prod:copy": "rm -rf prod && cp -r public prod && rm prod/gdc/css/style.css prod/gdc/js/{l10n.js,main.js}",
+    "prod:minify": "npm run prod:minify:css && npm run prod:minify:js",
+    "prod:minify:css": "crass public/gdc/css/style.css > prod/gdc/css/style.css",
+    "prod:minify:js": "uglifyjs public/gdc/js/main.js > prod/gdc/js/main.js && uglifyjs public/gdc/js/l10n.js > prod/gdc/js/l10n.js",
+    "postinstall": "npm run prod:build"
   },
-  "main": "./index",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "dependencies": {
     "crass": "^0.7.4",
-    "node-static": "^0.7.6",
     "uglify-js": "^2.4.16"
   },
   "devDependencies": {
-    "nodemon": "^1.3.7"
+    "onchange": "^2.0.0"
   }
 }
