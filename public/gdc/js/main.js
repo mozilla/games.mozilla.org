@@ -13,8 +13,9 @@
 
 
   // Adding a class so we can disable certain :hover styles on touch.
-  // NOTE: Not using classList for IE compatibility.
-  document.body.className += 'ontouchstart' in window ? ' has-touch' : ' lacks-touch';
+  // NOTE: Not using `classList` for IE compatibility.
+  var hasTouch = 'ontouchstart' in window;
+  document.body.className += hasTouch ? ' has-touch' : ' lacks-touch';
 
 
   // Set the 'lang' and 'dir' attributes to `<html>` when the page is translated.
@@ -88,10 +89,10 @@
   $('#mozilla').addEventListener('mouseover', setPressEmail);
 
 
-  // Open external links in new tabs.
-  toArray(
-    document.querySelectorAll('[href^="//"], [href*="://"]')
-  ).forEach(function (link) {
-    link.setAttribute('target', '_blank');
-  });
+  // Open external links in new tabs on mobile.
+  if (hasTouch) {
+    $$('[href^="//"], [href*="://"]').forEach(function (link) {
+      link.setAttribute('target', '_blank');
+    });
+  }
 })();
