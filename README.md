@@ -15,7 +15,7 @@ To install the Node dependencies:
 
 ## Development
 
-All of the web content is static (see the [https://github.com/mozilla/moz-gdc/tree/master/public](`public/`) directory). Although a real server like Nginx is likely a better candidate for static content, all content here is served from a simple Node server to simplify deployment – and because server is already required for Service Workers and Basic Auth (for staging content not yet ready for public consumption).
+All of the web content is static (see the [https://github.com/mozilla/moz-gdc/tree/master/public](`public/`) directory).
 
 To serve the site from the simple server:
 
