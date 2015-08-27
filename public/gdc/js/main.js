@@ -11,48 +11,6 @@
     return toArray(document.querySelectorAll(selector));
   }
 
-  // ServiceWorker for caching requests offline.
-  loadSW();
-
-  function loadSW() {
-    if ('serviceWorker' in navigator) {
-      // Service Workers require HTTPS (http://goo.gl/lq4gCo). `localhost`
-      // on a custom port is whitelisted.
-      if (location.protocol === 'file:') {
-        // Just don't execute the SW code if we're viewing the document.
-        return;
-      }
-      if (location.protocol === 'http:' &&
-          (!location.port || location.port === '80')) {
-        // Change the protocol to HTTPS if we're running on a real server.
-        location.protocol = 'https:';
-      }
-
-      if (true && localStorage.disable_sw) {
-        console.log('Service Workers are temporarily disabled');
-        navigator.serviceWorker.getRegistration('./sw.js').then(function (sw) {
-          if (sw) {
-            console.log('Temporarily disabling Service Workers, unregistering…');
-            sw.unregister();
-          }
-        });
-        return;
-      }
-
-      navigator.serviceWorker.register('./sw.js', {scope: './'}).then(function (sw) {
-        if (navigator.serviceWorker.controller) {
-          console.log('Page successfully fetched from cache by the Service Worker');
-        } else {
-          console.log('Page successfully registered by the Service Worker');
-        }
-      }).catch(function (err) {
-        console.error('Service Worker error occurred: ' + err);
-      });
-    } else {
-      console.warn('Service Workers are not supported in your browser');
-    }
-  }
-
 
   // Adding a class so we can disable certain :hover styles on touch.
   // NOTE: Not using classList for IE compatibility.
