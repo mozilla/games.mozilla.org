@@ -1,0 +1,744 @@
+// Base
+// --------------------------------------------------
+
+html {
+  background: #0253A7 url(../../img/bg_grain.png);
+  border-top: 2px solid #fff;
+}
+body {
+  background: url(../../img/bg_top@2x.png) 50% -70px no-repeat;
+  background-size: 1920px auto;
+}
+.section-title {
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 5px;
+  font-size: 1.8rem;
+}
+
+
+// Header
+// --------------------------------------------------
+
+.header {
+  background: transparent;
+  text-align: center;
+  padding-top: 0;
+  margin-top: -50px;
+  img {
+    max-width: 90%;
+    display: block;
+    margin: 190px auto 0;
+    font-size: 8rem;
+    @include animation(fadein 3s);
+    &.headline-mobile {
+      display: none;
+    }
+  }
+}
+
+
+// Announcement
+// --------------------------------------------------
+
+.announcement {
+  text-align: center;
+  margin: 160px auto 60px;
+  max-width: 850px;
+  display: none;
+  .announcement-active & {
+    display: block;
+  }
+  .message {
+    background: rgba(16, 145, 206, 0.25);
+    padding: 50px 50px 60px;
+    border-radius: 5px;
+    h4 {
+      color: #FFF;
+      font-size: 2.1rem;
+      font-style: italic;
+      & strong {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+      }
+    }
+    p {
+      padding: 3px 0;
+      font-size: 2.0rem;
+      line-height: 1.3;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    strong {
+      font-weight: 600;
+    }
+  }
+  .btn {
+    background-color: rgb(8, 66, 119);
+    outline: none;
+    border: none;
+    color: #1091CE;
+    padding: 24px 42px;
+    border-radius: 15px;
+    letter-spacing: 3.6px;
+    font-weight: 600;
+    font-family: $open;
+    font-size: 1.3rem;
+    margin: -32px auto 0;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    @include transition(all .3s);
+    &:hover {
+      color: #FFF;
+      background-color: rgb(48, 106, 159);
+    }
+  }
+}
+
+
+// Top Stories
+// --------------------------------------------------
+
+.top-stories {
+  margin-top: 60px;
+  body:not(.announcement-active) & {
+    margin-top: 160px;
+  }
+  h4 {
+    margin-left: 15px;
+    margin-bottom: 30px;
+    body:not(.announcement-active) & {
+      text-align: center;
+    }
+  }
+  .wrapper {
+    @include make-xs-column(12);
+    @include make-sm-column(6);
+    &.wrapper-landscape {
+      @include make-sm-column(12);
+    }
+  }
+}
+
+.wrapper {
+  margin-bottom: 28px;
+  padding: 0 14px;
+}
+
+.link {
+  position: relative;
+  margin: 0 0 5px;
+  display: block;
+  color: $text-color;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+  background-color: #fff;
+  -webkit-transform: translateZ(0px);
+  -webkit-backface-visibility: hidden;
+  position: relative;
+  @include transition(all .3s);
+  .imageWrapper {
+    width: 105%;
+    overflow: hidden;
+    margin-left: -2.5%;
+  }
+  .border {
+    border: 10px solid transparent;
+    border-bottom: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    @include transition(border .3s);
+  }
+  figcaption {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    border-top: 3px solid #FFF;
+    padding: 0 15px;
+    @include transition(all .3s);
+    h2 {
+      margin: 20px 0 5px;
+      @include transition(color .25s);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.2;
+    }
+    p {
+      opacity: .8;
+      margin-bottom: 20px;
+      color: $text-color;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  img {
+    @include transition-duration(.5s);
+    @include scale(1,1);
+    max-width: 100%;
+  }
+  &:hover {
+    text-decoration: none;
+    h2 {
+      color: #1d8ede;
+    }
+    p {
+      color: $text-color;
+    }
+    .border {
+      border: 10px solid #fff;
+      border-bottom: none;
+    }
+    figcaption {
+      text-decoration: none;
+      color: #1d8ede;
+      z-index: 100;
+    }
+    img {
+      @include scale(1.1,1.095);
+      @include transition-duration(.5s);
+    }
+  }
+}
+
+
+// Companies
+// --------------------------------------------------
+
+.companies {
+  margin: 70px 0 0;
+  background: url(../../img/bg_partners.png);
+  background-size: cover;
+  padding: 74px 0;
+  color: #FFF;
+  text-align: center;
+  letter-spacing: .35em;
+  h4 {
+    font-size: 1.4rem;
+  }
+  .icon-unity {
+    background: url('../../img/icon-unity.png') 0 -54px;
+    height: 52px;
+    width: 142px;
+    background-size: 142px auto;
+    &:after {
+      background-image: url('../../img/icon-unity.png');
+      height: 52px;
+      width: 142px;
+      background-size: 142px auto;
+    }
+  }
+  .icon-playcanvas {
+    background: url('../../img/icon-playcanvas.png') 0 -28px;
+    width: 150px;
+    height: 28px;
+    background-size: 150px auto;
+    &:after {
+      background-image: url('../../img/icon-playcanvas.png');
+      width: 150px;
+      height: 28px;
+      background-size: 150px auto;
+    }
+  }
+  .icon-king {
+    background: url('../../img/icon-king.png') 0 -81px;
+    width: 120px;
+    height: 81px;
+    background-size: 120px auto;
+    &:after {
+      background-image: url('../../img/icon-king.png');
+      width: 120px;
+      height: 81px;
+      background-size: 120px auto;
+    }
+  }
+  .icon-humblebundle {
+    background: url('../../img/icon-humble.png') 0 -25px;
+    width: 150px;
+    height: 25px; 
+    background-size: 150px auto;
+    &:after {
+      background-image: url('../../img/icon-humble.png');
+      width: 150px;
+      height: 25px; 
+      background-size: 150px auto;
+    }
+  }
+  .icon-gameloft {
+    background: url('../../img/icon-gamleloft.png') 0 -73px;
+    width: 105px;
+    height: 73px;
+    background-size: 105px auto;
+    &:after {
+      background-image: url('../../img/icon-gamleloft.png');
+      width: 105px;
+      height: 73px;
+      background-size: 105px auto;
+    }
+  }
+  .icon-turbulenz {
+    background: url('../../img/icon-turbulenz.png') 0 -26px;
+    width: 150px;
+    height: 26px;
+    background-size: 150px auto;
+    &:after {
+      background-image: url('../../img/icon-turbulenz.png');
+      width: 150px;
+      height: 26px;
+      background-size: 150px auto;
+    }
+  }
+  .icon-epic {
+    background: url('../../img/icon-epicgames.png') 0 -65px;
+    width: 57px;
+    height: 65px;
+    background-size: 57px auto;
+    &:after {
+      background-image: url('../../img/icon-epicgames.png');
+      width: 57px;
+      height: 65px;
+      background-size: 57px auto;
+    }
+  }
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 36px 30px 0 0;
+    background-repeat: no-repeat;
+    position: relative;
+    @include transition(all .3s);
+    &:last-child {
+      margin-right: 0;
+    }
+    &:after {
+      background-position: 0 0;
+      content: '';
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include transition(opacity .3s);
+    }
+    &:hover {
+      background-image: transparent;
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+// More Stories
+// --------------------------------------------------
+
+.stories {
+  background-color: #17232E;
+  margin-bottom: 0;
+  padding: 75px 0 48px;
+  color: #FFF;
+  overflow: hidden;
+  .column {
+    @include make-xs-column(12);
+    @include make-sm-column(6);
+    &:last-child {
+      margin-left: 0px;
+    }
+  }
+  ul {
+    padding-left: 0 !important;
+  }
+  h4 {
+    color: #1795E3;
+    text-align: left;
+    margin: 0 0 30px;
+    padding-left: 15px;
+  }
+  a {
+    color: #FFF;
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 300;
+    width: 100%;
+    padding-right: 15px;
+    display: inline-block;
+    @include transition(color .25s);
+    &:after {
+      text-align: right;
+      content: "»";
+      display: inline-block;
+      margin-right: -15px;
+      width: 15px;
+      color: #1795E3;
+      @include transition(margin .25s);
+    }
+    &:hover {
+      color: #1795E3;
+      text-decoration: none;
+      &:after {
+        margin-left: 5px;
+        color: #FFF;
+      }
+    }
+  }
+  li {
+    list-style: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+
+// Footer
+// --------------------------------------------------
+
+footer {
+  background: rgb(230, 230, 230) url(../../img/bg_grain.png);
+  padding: 56px 0;
+  color: rgb(59, 59, 59);
+  overflow: hidden;
+  .logo {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-family: $ff-meta;
+    font-size: 3.8rem;
+    opacity: .6;
+    font-weight: 700;
+    line-height: .8;
+    color: $text-color;
+    @include transition(opacity .3s);
+    @include make-xs-column(12);
+    @include make-sm-column(3);
+    @include make-md-column(2);
+    &:hover {
+      text-decoration: none;
+      opacity: .7;
+    }
+  }
+  h4 {
+    font-size: 1.4rem;
+    padding-right: 28px;
+    line-height: 1.3;
+    margin: 0;
+  }
+  .footer-content {
+    @include make-xs-column(12);
+    @include make-sm-column(9);
+    @include make-md-column(10);
+    h4 {
+      @include make-xs-column(12);
+      @include make-sm-column(6);
+      @include make-md-column(7);
+      @include make-md-column-offset(1);
+    }
+  }
+  .footer-nav {
+    font-size: 1.4rem;
+    font-family: $open;
+    @include make-xs-column(12);
+    @include make-sm-column(6);
+    @include make-md-column(3);
+    @include make-md-column-offset(1);
+    li {
+      width: 100%;
+      float: none;
+      line-height: 1.3;
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 980px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 979px) {
+
+  .header {
+    img {
+      margin-top: 120px;
+    }
+  }
+
+  .container {
+    .link {
+      figcaption {
+        min-height: 80px;
+        h2 {
+          font-size: 2rem;
+          margin-top: 15px;
+          vertical-align: center;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .companies {
+    height: auto;
+    padding-bottom: 42px;
+    .icon {
+      display: inline-block;
+      padding: 0 25px;
+      margin-top: 23px;
+      margin-bottom: 0;
+    }
+  }
+
+  .stories {
+    font-size: 1.4rem;
+    a {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+  }
+
+  footer {
+    p {
+      text-align: left;
+      margin-bottom: 30px;
+      font-size: 3.5rem;
+    }
+    .container {
+      width: 100% !important;
+    }
+    .footer-nav {
+      ul {
+        padding-left: 0;
+      }
+    }
+  }
+
+}
+
+// Desktop and up
+@media (min-width: 980px) {}
+
+// Up to desktop
+@media (max-width: 991px) {
+
+  .container {
+    width: 100% !important;
+  }
+
+  .header {
+    img {
+      &.headline-desktop {
+        display: none;
+      }
+      &.headline-mobile {
+        display: block;
+      }
+    }
+  }
+
+  .announcement {
+    max-width: 70%;
+    .message {
+      h4 {
+        line-height: 1.4;
+        & strong {
+          display: block;
+        }
+      }
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .header {
+     img {
+      margin-top: 150px;
+    }
+  }
+
+  .announcement {
+    .message {
+      padding: 30px 30px 50px;
+      h4 {
+        font-size: 2.2rem;
+        strong {
+          font-size: 2.4rem;
+        }
+      }
+      p {
+        padding: 0;
+        font-size: 1.7rem;
+      }
+    }
+    .btn {
+      position: relative;
+      padding: 1.5em;
+      letter-spacing: 2.5px;
+      z-index: 1;
+    }
+  }
+
+  .top-stories {
+    body:not(.announcement-active) & {
+      margin-top: 100px;
+    }
+  }
+
+  .link {
+    figcaption {
+      h2 {
+        font-size: 2.0rem;
+      }
+    }
+    &:hover {
+      text-decoration: none;
+      figcaption {
+        h2 {
+          color: #333333;
+        }
+        text-decoration: none;
+        color: #333333;
+        z-index: 100;
+      }
+      img {
+        @include scale(1,1);
+      }
+    }
+    .wrapper-landscape & img {
+      max-width: 200%;
+    }
+  }
+  .companies {
+    padding-bottom: 5em;
+    h4 {
+      line-height: 1.4;
+      font-size: 1.4rem;
+      letter-spacing: .2em;
+      max-width: 90%;
+      margin: 0 auto;
+    }   
+  }
+  .stories {
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding: 42px 0 30px 30px;
+    h4 {
+      line-height: 1.3;
+      padding-left: 0;
+    }
+    .container {
+      padding: 0;
+    }
+    .column {
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 15px;
+    }
+    a {
+      font-size: 1.6rem;
+      &:hover {
+        color: #FFF;
+        p { 
+          color: #1795E3;
+          margin-left: 0;
+        }
+      }
+    }
+    
+  }
+  footer {
+    .footer-content {
+      padding: 0; 
+    }
+    padding: 30px 0 0 0;
+    h4 {
+      font-size: 1.2rem;
+      padding: 0 0 20px;
+    }
+
+    p {
+      text-align: left;
+      font-size: 2.4rem;
+      margin: 0 0 10px; 
+    }
+    .footer-nav {
+      font-size: 1.2rem;
+      ul {
+        padding-left: 0;
+      }
+      text-align: left;
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 580px) {
+
+  .announcement {
+    margin-top: 154px;
+    max-width: 86%;
+  }
+
+  .top-stories {
+    body:not(.announcement-active) & {
+      margin-top: 120px;
+    }
+  }
+
+  .companies {
+    img {
+      width: 50%;
+    }
+    .odd {
+      width: 35%;
+    }
+    .extraOdd {
+      width: 30%;
+    }
+  }
+
+}
+
+// Up to portrait phone
+@media (max-width: 400px) {
+
+  .link {
+    figcaption {
+      h2 {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  .companies {
+    .icon {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      &:last-child {
+        margin-right: auto;
+      }
+    }
+  }
+
+}
