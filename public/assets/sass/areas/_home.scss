@@ -90,7 +90,7 @@ body {
     text-transform: uppercase;
     position: relative;
     z-index: 1;
-    @include transition(all .3s);
+    @include transition(all .3s); 
     &:hover {
       color: #FFF;
       background-color: rgb(48, 106, 159);
@@ -114,18 +114,19 @@ body {
       text-align: center;
     }
   }
-  .wrapper {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 28px;
+    padding: 0 14px;
     @include make-xs-column(12);
     @include make-sm-column(6);
     &.wrapper-landscape {
       @include make-sm-column(12);
     }
   }
-}
-
-.wrapper {
-  margin-bottom: 28px;
-  padding: 0 14px;
 }
 
 .link {
