@@ -141,7 +141,6 @@ body {
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   position: relative;
-  @include transition(all .3s);
   .imageWrapper {
     width: 105%;
     overflow: hidden;
