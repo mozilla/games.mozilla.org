@@ -135,9 +135,9 @@ body {
   color: $text-color;
   text-decoration: none;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px;
   background-color: #fff;
-  -webkit-transform: translateZ(0px);
+  transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   position: relative;
   @include transition(all .3s);
