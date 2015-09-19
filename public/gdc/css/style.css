@@ -120,6 +120,13 @@ a.gdc__location:hover {
   height: 32px;
 }
 
+.twitter-logo {
+  background: url(../img/logos/social/twitter--white.svg) no-repeat;
+  background-size: 32px 32px;
+  height: 32px;
+  width:32px
+}
+
 .gdc__mozilla {
   background-position: 1px 50%;
   background-size: auto 22px;
