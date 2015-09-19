@@ -1,0 +1,85 @@
+// Font
+$open: "Open Sans", "open-sans",sans-serif;
+$ff-meta: "ff-meta-web-pro",sans-serif;
+
+h1, h2, h3, h4, h5, h6, p, article, a {
+  font-family: $open;
+}
+
+// Colors
+$blue: rgb(245,245,245);
+$dark: rgb(10,10,10);
+$darkFaded: rgba($dark, 0.65);
+$red: rgb(245, 62, 70);
+
+// Animation
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Tabzilla
+
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+#tabzilla {
+  float: right;
+  position: relative;
+  a {
+    @include image-replaced;
+    @include at2x('../../img/tabzilla-static', png, 147px, 37px);
+    background-repeat: no-repeat;
+    display: block;
+    height: 37px;
+    position: relative;
+    width: 147px;
+    z-index: 2;
+  }
+  &:before {
+    background-color: transparent;
+    content: '';
+    display: block;
+    height: 26px;
+    left: 28px;
+    position: absolute;
+    top: 0;
+    width: 88px;
+    z-index: 1;
+  }
+}
+
+html[dir='rtl'] {
+  #tabzilla {
+    float: left;
+  }
+}
