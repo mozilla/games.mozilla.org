@@ -26,7 +26,7 @@ body {
   padding-top: 0;
   margin-top: -50px;
   img {
-    max-width: 838px;
+    max-width: 90%;
     display: block;
     margin: 190px auto 0;
     font-size: 8rem;
@@ -531,7 +531,15 @@ footer {
 }
 
 // Desktop and up
-@media (min-width: 980px) {}
+@media (min-width: 980px) {
+
+  .header {
+    img {
+      max-width: 838px;
+    }
+  }
+
+}
 
 // Up to desktop
 @media (max-width: 991px) {
