@@ -9,22 +9,10 @@
   "scripts": {
     "start": "npm run prod",
     "dev": "http-server public -c-1",
-    "prod": "npm run prod:build && http-server prod -c60",
-    "prod:watch": "npm run prod & onchange public/** -- npm run prod:build",
-    "prod:build": "npm run prod:copy && npm run prod:minify",
-    "prod:copy": "rm -rf prod && cp -r public prod && rm -f prod/gdc/css/style.css prod/gdc/js/l10n.js prod/gdc/js/main.js",
-    "prod:minify": "npm run prod:minify:css && npm run prod:minify:js",
-    "prod:minify:css": "crass public/gdc/css/style.css > prod/gdc/css/style.css",
-    "prod:minify:js": "uglifyjs public/gdc/js/main.js > prod/gdc/js/main.js && uglifyjs public/gdc/js/l10n.js > prod/gdc/js/l10n.js",
-    "postinstall": "npm run prod:build"
+    "prod": "http-server public -c60"
   },
   "version": "1.0.0",
   "dependencies": {
-    "crass": "^0.7.4",
-    "http-server": "^0.8.0",
-    "uglify-js": "^2.4.16"
-  },
-  "devDependencies": {
-    "onchange": "^2.0.0"
+    "http-server": "^0.8.0"
   }
 }
