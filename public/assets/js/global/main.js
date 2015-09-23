@@ -20,9 +20,12 @@
   ga('create', 'UA-49796218-16', 'auto');
   ga('send', 'pageview');
 
-  $('#announcement a').addEventListener('click', function () {
-    ga('send', 'event', 'click.header', 'action-link');
-  });
+  var actionLink = document.getElementById('action-link');
+  if (typeof(actionLink) != 'undefined' && actionLink != null) {
+    $('#action-link').addEventListener('click', function () {
+      ga('send', 'event', 'click.header', 'action-link');
+    });
+  }
 
   $$('#companies a').forEach(function (el) {
     el.addEventListener('click', function () {
