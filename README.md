@@ -1,9 +1,6 @@
 # Mozilla Games
 
-Local Path | Local URL  | External URL | Description
----------- | ---------- | ------------ | -----------
-[`./public/index.html`](https://github.com/mozilla/moz-games/blob/master/public/index.html) | [http://localhost:8080/](http://localhost:8080/) | https://games.mozilla.org/ | Redirects to `/gdc/` for now
-[`./public/gdc/index.html`](https://github.com/mozilla/moz-games/blob/master/public/gdc/) | [http://localhost:8080/gdc/](http://localhost:8080/gdc/) | https://games.mozilla.org/gdc/ | Conference mini site for Mozilla's presence at [GDC 2015](http://www.gdconf.com/)
+[Mozilla Games site](https://games.mozilla.org/)
 
 
 ## Installation
