@@ -428,7 +428,7 @@ footer {
       opacity: .7;
     }
   }
-  h4 {
+  .footer-license {
     font-size: 1.4rem;
     padding-right: 28px;
     line-height: 1.3;
@@ -438,7 +438,7 @@ footer {
     @include make-xs-column(12);
     @include make-sm-column(9);
     @include make-md-column(10);
-    h4 {
+    .footer-license {
       @include make-xs-column(12);
       @include make-sm-column(6);
       @include make-md-column(7);
@@ -515,18 +515,8 @@ footer {
   }
 
   footer {
-    p {
-      text-align: left;
-      margin-bottom: 30px;
-      font-size: 3.5rem;
-    }
     .container {
       width: 100% !important;
-    }
-    .footer-nav {
-      ul {
-        padding-left: 0;
-      }
     }
   }
 
@@ -678,14 +668,9 @@ footer {
       padding: 0; 
     }
     padding: 30px 0 20px;
-    h4 {
+    .footer-license {
       font-size: 1.2rem;
       padding: 0 0 20px;
-    }
-    p {
-      text-align: left;
-      font-size: 2.4rem;
-      margin: 0 0 10px; 
     }
     .footer-nav {
       font-size: 1.2rem;
