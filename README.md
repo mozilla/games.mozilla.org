@@ -12,7 +12,7 @@ To install the Node dependencies:
 
 ## Development
 
-All of the web content is static (see the [https://github.com/mozilla/moz-games/tree/master/public](`public/`) directory).
+All of the web content is static (see the [https://github.com/mozilla/moz-games/tree/master/public](public/) directory).
 
 To serve the site from the simple server:
 
