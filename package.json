@@ -9,10 +9,13 @@
   "scripts": {
     "start": "npm run prod",
     "dev": "http-server public -c-1",
-    "prod": "http-server public -c60"
+    "deploy": "npm run ghpages",
+    "ghpages": "ghpages -p public"
   },
   "version": "1.0.0",
-  "dependencies": {
-    "http-server": "^0.8.0"
+  "dependencies": {},
+  "devDependencies": {
+    "ghpages": "0.0.8",
+    "http-server": "^0.9.0"
   }
 }

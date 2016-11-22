@@ -1,6 +1,6 @@
-# Mozilla Games
+# games.mozilla.org
 
-[Mozilla Games site](https://games.mozilla.org/)
+This is home of the __[Mozilla Games site](https://games.mozilla.org/):__ https://games.mozilla.org/
 
 
 ## Installation
@@ -16,53 +16,23 @@ All of the web content is static (see the [https://github.com/mozilla/moz-games/
 
 To serve the site from the simple server:
 
-    npm run dev
+    npm start
 
 Then launch the site from your favourite browser:
 
 [__http://localhost:8080/__](http://localhost:8080/)
 
-If you wish to serve the site from a different port:
-
-    PORT=8000 npm run dev
-
-To simulate the production environment but with file watchers to automatically recompile everything:
-
-    npm run prod:watch
-
-TODO: Eventually use something simple like [budo](https://github.com/mattdesl/budo) for local development to get easy file watching, live reloading, etc.
-
 
 ## Deployment
 
-In production, the server is run like so:
-
-    npm start
-
-Alternatively:
+To deploy to production (https://mozilla.github.io/moz-games/ which resolves to https://games.mozilla.org/):
 
     npm run prod
 
-To run the server through Heroku's [foreman](https://devcenter.heroku.com/articles/procfile):
 
-    foreman start web
+## Licence
 
-
-## Localisation
-
-All webpage content is localised using [webL10n](https://github.com/fabi1cazenave/webL10n), a client-side library for internationalisation (i18n) / localisation (l10n).
-
-If you would like to submit new translations:
-
-1. Ensure a section exists for the locale in [`l10n/locales.ini`](https://github.com/mozilla/moz-games/blob/master/public/gdc/l10n/locales.ini), followed by an `import` rule. For example:
-
-    ```properties
-    [fr]
-    @import url(data.fr.properties)
-    ```
-
-2. Open the corresponding [`.properties`](https://github.com/mozilla/moz-games/blob/master/public/gdc/l10n/data.fr.properties) file, and fill in all the translations.
-3. Open a pull request.
+[MIT Licence.](LICENCE)
 
 
 ## Contributing
