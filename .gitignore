@@ -1,8 +1,6 @@
-*.log
 .DS_Store
-logs/
-node_modules/
-npm-debug.log
-prod/
 .sass-cache
 config.codekit
+logs/
+node_modules/
+npm-debug*.log*

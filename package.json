@@ -1,5 +1,7 @@
 {
   "name": "moz-games",
+  "version": "1.0.0",
+  "private": "true",
   "description": "Mozilla Games site",
   "license": "MIT",
   "repository": {
@@ -8,10 +10,9 @@
   },
   "scripts": {
     "start": "npm run prod",
-    "dev": "static public -c -1 '{\"Cache-Control\": \"no-cache, must-revalidate\"}'",
-    "prod": "static public -c 60"
+    "dev": "static static -c -1 '{\"Cache-Control\": \"no-cache, must-revalidate\"}'",
+    "prod": "static static -c 60"
   },
-  "version": "1.0.0",
   "dependencies": {
     "node-static": "^0.7.9"
   }

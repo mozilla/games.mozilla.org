@@ -1,0 +1,9 @@
+{
+  "root": "public_html",
+  "clean_urls": true,
+  "error_page": "404.html",
+  "https_only": true,
+  "/assets/**": {
+    "Cache-Control": "public, max-age=60"
+  },
+}
