@@ -12,9 +12,6 @@
     "prod": "static public -c 60"
   },
   "version": "1.0.0",
-  "devDependencies": {
-    "http-server": "^0.9.0"
-  },
   "dependencies": {
     "node-static": "^0.7.9"
   }
