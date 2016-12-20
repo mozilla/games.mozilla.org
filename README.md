@@ -26,12 +26,6 @@ If you wish to serve the site from a different port:
 
     PORT=8000 npm run dev
 
-To simulate the production environment but with file watchers to automatically recompile everything:
-
-    npm run prod:watch
-
-TODO: Eventually use something simple like [budo](https://github.com/mattdesl/budo) for local development to get easy file watching, live reloading, etc.
-
 
 ## Deployment
 

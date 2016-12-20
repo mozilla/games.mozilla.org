@@ -8,11 +8,14 @@
   },
   "scripts": {
     "start": "npm run prod",
-    "dev": "http-server public -c-1",
-    "prod": "http-server public -c60"
+    "dev": "static public -c -1 '{\"Cache-Control\": \"no-cache, must-revalidate\"}'",
+    "prod": "static public -c 60"
   },
   "version": "1.0.0",
   "devDependencies": {
     "http-server": "^0.9.0"
+  },
+  "dependencies": {
+    "node-static": "^0.7.9"
   }
 }
