@@ -10,8 +10,8 @@
   },
   "scripts": {
     "start": "npm run prod",
-    "dev": "static static -c -1 '{\"Cache-Control\": \"no-cache, must-revalidate\"}'",
-    "prod": "static static -c 60"
+    "dev": "static public_html -c -1 '{\"Cache-Control\": \"no-cache, must-revalidate\"}'",
+    "prod": "static public_html -c 60"
   },
   "dependencies": {
     "node-static": "^0.7.9"
