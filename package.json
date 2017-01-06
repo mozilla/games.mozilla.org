@@ -17,7 +17,6 @@
   "dependencies": {
     "electricity": "github:cvan/electricity#a10db6a",
     "express": "^4.14.0",
-    "express-posthtml": "^1.0.4",
     "internal-ip": "^1.2.0",
     "shx": "^0.2.1",
     "yonder": "^0.2.0"
