@@ -1,11 +1,9 @@
 var fs = require('fs');
 var path = require('path');
-var urllib = require('url');
 
 var electricity = require('electricity');
 var express = require('express');
 var internalIp = require('internal-ip');
-var tinylr = require('tiny-lr');
 var yonder = require('yonder');
 
 var app = express();
@@ -16,15 +14,8 @@ var CACHE_MAX_AGE = IS_DEV ? -1 : 60;
 var CACHE_EXPIRES = IS_DEV ? 0 : 60;
 
 var PORT_SERVER = process.env.PORT || process.env.PORT || 3000;
-var PORT_LR = process.env.LR_PORT || process.env.PORT || 35729;
 var PUBLIC_DIR = path.join(__dirname, '_build');
 var ROUTER_PATH = path.join(PUBLIC_DIR, 'ROUTER');
-
-// Live-reloading (for local development).
-// See https://github.com/mklabs/tiny-lr for usage.
-if (IS_DEV) {
-  app.use(tinylr.middleware({app: app, dashboard: true}));
-}
 
 app.initServer = function () {
   // Serve static files (very similar to how Surge and GitHub Pages do).
@@ -37,12 +28,6 @@ app.initServer = function () {
       'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
     }
   };
-  if (IS_DEV) {
-    electricityOptions.livereload = {
-      'enabled': true,
-      'listener': tinylr
-    };
-  }
   if (CACHE_MAX_AGE) {
     electricityOptions.headers['Cache-Control'] = 'max-age=' + CACHE_MAX_AGE;
   }
