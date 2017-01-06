@@ -10,10 +10,17 @@
   },
   "scripts": {
     "start": "npm run prod",
-    "dev": "static public_html -c -1 '{\"Cache-Control\": \"no-cache, must-revalidate\"}'",
-    "prod": "static public_html -c 60"
+    "build": "shx rm -rf _build && shx mkdir -p _build && shx cp -R public_html/* _build && shx rm -rf _build/assets/sass",
+    "preprod": "npm run build",
+    "prod": "node ./server"
   },
   "dependencies": {
-    "node-static": "^0.7.9"
+    "electricity": "github:cvan/electricity#a10db6a",
+    "express": "^4.14.0",
+    "express-posthtml": "^1.0.4",
+    "internal-ip": "^1.2.0",
+    "shx": "^0.2.1",
+    "tiny-lr": "^1.0.3",
+    "yonder": "^0.2.0"
   }
 }

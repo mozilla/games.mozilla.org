@@ -1,5 +1,6 @@
 .DS_Store
 .sass-cache
+_build
 config.codekit
 logs/
 node_modules/
