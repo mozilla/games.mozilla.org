@@ -1,0 +1,21 @@
+{
+  "name": "moz-games",
+  "description": "Add app.json to allow for automated test deploys",
+  "scripts": {
+  },
+  "env": {
+    "AUTH_GDC": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
