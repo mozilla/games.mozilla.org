@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "npm run prod",
-    "build": "shx rm -rf _build && shx mkdir -p _build && shx cp -R public_html/* _build && shx rm -rf _build/assets/sass",
+    "build": "shx rm -rf _build && shx mkdir -p _build && shx cp -R public_html/* _build",
     "preprod": "npm run build",
     "prod": "node ./server"
   },
