@@ -1,26 +1,26 @@
-var fs = require('fs');
-var path = require('path');
+const fs = require('fs');
+const path = require('path');
 
-var electricity = require('electricity');
-var express = require('express');
-var internalIp = require('internal-ip');
-var yonder = require('yonder');
+const electricity = require('electricity');
+const express = require('express');
+const internalIp = require('internal-ip');
+const yonder = require('yonder');
 
-var app = express();
+let app = express();
 
-var IS_DEV = app.get('env') === 'development';
+const IS_DEV = app.get('env') === 'development';
 
-var CACHE_MAX_AGE = IS_DEV ? -1 : 60;
-var CACHE_EXPIRES = IS_DEV ? 0 : 60;
+const CACHE_MAX_AGE = IS_DEV ? -1 : 60;
+const CACHE_EXPIRES = IS_DEV ? 0 : 60;
 
-var PORT_SERVER = process.env.PORT || process.env.PORT || 3000;
-var PUBLIC_DIR = path.join(__dirname, '_build');
-var ROUTER_PATH = path.join(PUBLIC_DIR, 'ROUTER');
+const PORT_SERVER = parseInt(process.env.PORT || process.env.PORT || '8080');
+const PUBLIC_DIR = path.join(__dirname, '_build');
+const ROUTER_PATH = path.join(PUBLIC_DIR, 'ROUTER');
 
 app.initServer = function () {
   // Serve static files (very similar to how Surge and GitHub Pages do).
   // See http://expressjs.com/en/starter/static-files.html for usage.
-  var electricityOptions = {
+  let electricityOptions = {
     'hashify': false,
     'headers': {
       'Access-Control-Allow-Origin': '*',

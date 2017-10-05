@@ -9,16 +9,21 @@
     "url": "git://github.com/mozilla/moz-games.git"
   },
   "scripts": {
-    "start": "npm run prod",
+    "start": "npm run dev",
     "build": "shx rm -rf _build && shx mkdir -p _build && shx cp -R public_html/* _build",
     "preprod": "npm run build",
-    "prod": "node ./server"
+    "prod": "cross-env NODE_ENV='production' node ./server.js",
+    "dev": "cross-env NODE_ENV='development' live-server public_html --no-browser"
   },
   "dependencies": {
+    "cross-env": "^5.0.5",
     "electricity": "github:cvan/electricity#a10db6a",
     "express": "^4.14.0",
     "internal-ip": "^1.2.0",
     "shx": "^0.2.1",
     "yonder": "^0.2.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0"
   }
 }
