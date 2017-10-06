@@ -1,21 +1,20 @@
 {
   "name": "moz-games",
-  "description": "Add app.json to allow for automated test deploys",
-  "scripts": {
-  },
+  "description": "Mozilla Games site",
+  "scripts": {},
   "env": {
-    "AUTH_GDC": {
-      "required": true
+    "NODE_MODULES_CACHE": {
+      "required": true,
+      "description": "Disables caching `node_modules/` (because of Git dependencies). See https://devcenter.heroku.com/articles/nodejs-support#cache-behavior for details.",
+      "value": "false"
     }
   },
-  "formation": {
-  },
-  "addons": [
-
-  ],
+  "website": "https://games.mozilla.org/"
+  "formation": {},
   "buildpacks": [
     {
       "url": "heroku/nodejs"
     }
-  ]
+  ],
+  "addons": []
 }
