@@ -6,3 +6,12 @@
 
   # Default build command.
   command = "npm run build"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = '*'
+    Access-Control-Allow-Methods = "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS"
+    Access-Control-Allow-Headers = "Origin, X-Requested-With, Content-Type, Accept"
+
+    Cache-Control = "max-age=60"
