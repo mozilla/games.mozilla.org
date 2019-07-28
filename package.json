@@ -17,14 +17,14 @@
   },
   "dependencies": {
     "cross-env": "^5.0.5",
-    "electricity": "github:cvan/electricity#a10db6a",
     "express": "^4.14.0",
+    "electricity": "^2.6.0",
     "internal-ip": "^1.2.0",
     "shx": "^0.2.1",
     "yonder": "^0.2.0"
   },
   "devDependencies": {
-    "live-server": "^1.2.0"
+    "live-server": "^1.2.1"
   },
   "cacheDirectories": ""
 }
