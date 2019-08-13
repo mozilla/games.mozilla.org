@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "cross-env": "^5.0.5",
-    "express": "^4.14.0",
+    "express": "^4.17.1",
     "electricity": "^2.6.0",
     "internal-ip": "^1.2.0",
     "shx": "^0.3.2",
