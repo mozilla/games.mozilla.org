@@ -16,7 +16,7 @@
     "dev": "cross-env NODE_ENV='development' live-server public_html --no-browser"
   },
   "dependencies": {
-    "cross-env": "^5.0.5",
+    "cross-env": "^5.2.0",
     "express": "^4.17.1",
     "electricity": "^2.6.0",
     "internal-ip": "^1.2.0",
